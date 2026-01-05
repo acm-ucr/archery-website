@@ -1,4 +1,4 @@
-# ACM UCR Website Template
+# Archery Website
 
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23407ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
@@ -13,7 +13,7 @@
 
 ## Figma
 
-[ACM UCR Website Template Figma Design File](https://www.figma.com/)
+[Archery Website Figma Design File](https://www.figma.com/design/m9wZrhJQbtQY1Y9mDYyF6h/Summer--25-Archery?node-id=0-1&t=08awnuVvLnSqYnHf-1)
 
 ## Node.js
 
