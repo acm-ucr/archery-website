@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@theme {
+  --color-archery-blue-100: #bce3fa;
+  --color-archery-blue-200: #94d7ff;
+  --color-archery-blue-300: #0052f8;
+  --color-archery-blue-400: #003db8;
+  --color-archery-blue-500: #0a3386;
+  --color-archery-blue-600: #4766a4;
+
+  --color-archery-pink-100: #ffb7b8;
+  --color-archery-pink-200: #ff8e8f;
+
+  --color-archery-grey-100: #737780;
+  --color-archery-grey-200: #4c4c4c;
+  --color-archery-grey-300: #242834;
+
+  --color-archery-yellow-100: #f0dd96;
+  --color-archery-yellow-200: #ffd647;
+  --color-archery-yellow-300: #af8300;
+}
