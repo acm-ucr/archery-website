@@ -1,7 +1,9 @@
+import Example from "@/app/example";
+
 const Home = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      Hello World
+      <Example text1="Adjust" text2="These" text3="Props" />
     </div>
   );
 };
