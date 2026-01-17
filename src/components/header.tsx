@@ -14,7 +14,7 @@ const Header = ({ title, subTitle }: HeaderProps) => {
         alt="Background"
         className="h-full w-full object-cover"
       />
-      <div className="absolute inset-0 flex items-center justify-center bg-white/85" />
+      <div className="absolute inset-0 flex items-center justify-center bg-white/75" />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-8xl font-black">
         <p className="text-archery-grey-300">{title}</p>
         <p className="from-archery-yellow-300 to-archery-blue-300 bg-gradient-to-r bg-clip-text p-5 text-transparent">
