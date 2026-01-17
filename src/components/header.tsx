@@ -1,17 +1,40 @@
-import Image from "next/image"
-import Background from "@/public/headerBackground.webp"
+import Image from "next/image";
+import Background from "@/public/headerBackground.webp";
 
-const Header = () => {
-  return (
-    <div className="relative w-full h-full">
-        <Image src = {Background} alt = "Background" className="w-full h-full object-cover"/>
-        <div className="flex justify-center items-center absolute bg-white/85 inset-0" />
-        <div className="flex flex-col justify-center items-center absolute text-center text-8xl font-extrabold inset-0">
-        <p className="text-archery-grey-300">Join</p>
-        <p className="text-transparent bg-clip-text bg-gradient-to-r from-archery-yellow-300 to-archery-blue-300">Archery @UCR</p>
-        </div>
-    </div>
-  )
+interface HeaderProps {
+  title: string;
 }
 
-export default Header
+function Split(title: string) {
+  const name = title.split(" ");
+  return {
+    first: name[0],
+    second: name.slice(1).join(" "),
+  };
+}
+
+const Header = ({ title }: HeaderProps) => {
+  const { first, second } = Split(title);
+  return (
+    <div className="relative">
+      <Image
+        src={Background}
+        alt="Background"
+        className="h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 flex items-center justify-center bg-white/85" />
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-8xl font-black">
+        <p className="text-archery-grey-300">{first}</p>
+        {second ? (
+          <p className="from-archery-yellow-300 to-archery-blue-300 bg-gradient-to-r bg-clip-text p-5 text-transparent">
+            {second}
+          </p>
+        ) : (
+          ""
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Header;
