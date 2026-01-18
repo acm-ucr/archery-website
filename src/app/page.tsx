@@ -3,7 +3,7 @@ import Example from "@/app/example";
 const Home = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      <Example text1="Adjust" text2="These" text3="Props" />
+      <Example text1="Hello" text2="Click" text3="Props" />
     </div>
   );
 };
