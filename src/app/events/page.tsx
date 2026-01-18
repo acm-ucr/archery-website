@@ -1,5 +1,7 @@
+import Header from "@/components/header";
+
 const EventsPage = () => {
-  return <div>EventsPage</div>;
+  return <Header title="Events" />;
 };
 
 export default EventsPage;
