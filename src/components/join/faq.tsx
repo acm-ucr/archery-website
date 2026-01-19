@@ -22,7 +22,7 @@ const faq = () => {
         >
           <AccordionItem value="item-1">
             <AccordionTrigger>
-              <p className="font-sans text-xl font-semibold text-[##444444]">
+              <p className="font-sans text-xl font-semibold text-[#444444]">
                 Do I need experience or my own equipment?
               </p>
             </AccordionTrigger>
@@ -36,7 +36,7 @@ const faq = () => {
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger>
-              <p className="font-sans text-xl font-semibold text-[##444444]">
+              <p className="font-sans text-xl font-semibold text-[#444444]">
                 I can’t be at practice the whole time, is that okay?
               </p>
             </AccordionTrigger>
@@ -52,7 +52,7 @@ const faq = () => {
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger>
-              <p className="font-sans text-xl font-semibold text-[##444444]">
+              <p className="font-sans text-xl font-semibold text-[#444444]">
                 Do you guys compete?
               </p>
             </AccordionTrigger>
