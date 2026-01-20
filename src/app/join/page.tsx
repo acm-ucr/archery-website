@@ -1,11 +1,11 @@
+import Header from "@/components/header";
 import FAQ from "@/components/join/faq";
 
 const JoinPage = () => {
   return (
-    <>
-      <FAQ />
-    </>
-  );
+  <>
+  <Header title="Join" subTitle="Archery @UCR" />;
+  <FAQ />
+  </>
+  )
 };
-
-export default JoinPage;
