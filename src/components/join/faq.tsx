@@ -22,17 +22,15 @@ const FAQ = () => {
           className="w-full"
           defaultValue="item-0"
         >
-          {FAQdata.map((item, index) => (
+          {FAQdata.map(({ question, answer }, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger>
                 <p className="text-archery-grey-400 px-3 font-sans text-xl font-semibold">
-                  {item.question}
+                  {question}
                 </p>
               </AccordionTrigger>
               <AccordionContent>
-                <p className="w-[40vw] px-3 text-base text-black">
-                  {item.answer}
-                </p>
+                <p className="w-[40vw] px-3 text-base text-black">{answer}</p>
               </AccordionContent>
             </AccordionItem>
           ))}
