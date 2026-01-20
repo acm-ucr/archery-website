@@ -3,9 +3,11 @@ import FAQ from "@/components/join/faq";
 
 const JoinPage = () => {
   return (
-  <>
-  <Header title="Join" subTitle="Archery @UCR" />;
-  <FAQ />
-  </>
-  )
+    <>
+      <Header title="Join" subTitle="Archery @UCR" />
+      <FAQ />
+    </>
+  );
 };
+
+export default JoinPage;
