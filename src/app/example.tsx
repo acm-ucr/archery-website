@@ -1,17 +1,23 @@
 const Example = (props: { text1: string; text2: string; text3: string }) => {
   return (
-    <div className="bg-archery-blue-500 flex w-3/4 items-center gap-1 justify-self-center p-8">
-      <div className="bg-archery-blue-100 w-1/2 p-5 text-left">
+    <div className="bg-archery-blue-500 flex w-2/3 flex-col items-center gap-4 justify-self-center rounded-3xl p-8">
+      <div className="bg-archery-pink-100 text-2x1 w-1/2 p-5 text-center text-white">
         {props.text1}
       </div>
 
       <div className="flex w-1/2 flex-row gap-1">
-        <div className="bg-archery-blue-100 w-full p-5 text-left">
+        <div className="bg-archery-blue-100 w-1/2 rounded-full p-5 text-center">
+          {props.text2}
+        </div>
+
+        <div className="bg-archery-blue-100 w-1/2 rounded-full p-5 text-center">
           {props.text2}
         </div>
       </div>
 
-      <div className="bg-archery-blue-100 w-1/2 p-5">{props.text3}</div>
+      <div className="bg-archery-yellow-100 w-1/2 p-5 text-center">
+        {props.text3}
+      </div>
     </div>
   );
 };
