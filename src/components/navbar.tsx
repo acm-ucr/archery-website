@@ -13,7 +13,7 @@ const navbar = () => {
         </Link>
 
         <div className="flex items-center gap-20 text-2xl">
-          {navbarLinks.map(({ link, name }, index) => (
+          {navbarLinks.map(({ link, name }) => (
             <Link
               key={link}
               href={link}
