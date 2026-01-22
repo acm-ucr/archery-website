@@ -2,7 +2,7 @@
 import { navbarLinks } from "@/data/navbarLinks";
 import Link from "next/link";
 import Image from "next/image";
-import NavbarLogo from "@/public/NavBar.png";
+import NavbarLogo from "@/public/NavBar.webp";
 
 const navbar = () => {
   return (
