@@ -1,7 +1,17 @@
 import Header from "@/components/header";
+import Card from "@/components/board/card";
 
 const BoardPage = () => {
-  return <Header title="Board" />;
+  return (
+    <div>
+      <Header title="Board" />
+      <Card
+        imageSrc="/boardMemberIcon.png"
+        name="First Last Name"
+        position="position"
+      />
+    </div>
+  );
 };
 
 export default BoardPage;
