@@ -6,7 +6,7 @@ const BoardPage = () => {
     <div>
       <Header title="Board" />
       <Card
-        imageSrc="/boardMemberIcon.png"
+        imageSrc="/boardMemberIcon.webp"
         name="First Last Name"
         position="position"
       />
