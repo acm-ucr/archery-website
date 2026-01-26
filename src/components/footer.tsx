@@ -19,7 +19,7 @@ const Footer = () => {
         ))}
         <div className="absolute top-1/2 right-30 -translate-y-1/2">
           <Image
-            src="acherylogo.jpg"
+            src="acherylogo.png"
             alt="Archery Club Logo"
             width={20}
             height={20}
