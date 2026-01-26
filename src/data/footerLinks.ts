@@ -9,13 +9,13 @@ interface FooterLink {
 
 export const footerLinks: FooterLink[] = [
   {
-    icon: FaInstagram,
-    url: "https://www.instagram.com/archeryatucr/",
-    text: "@archeryatucr",
-  },
-  {
     icon: FaEnvelope,
     url: "mailto:ucrarcheryclub@gmail.com",
     text: "ucrarcheryclub@gmail.com",
+  },
+  {
+    icon: FaInstagram,
+    url: "https://www.instagram.com/archeryatucr/",
+    text: "@archeryatucr",
   },
 ];
