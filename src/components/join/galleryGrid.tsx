@@ -8,7 +8,7 @@ import bottomRight from "@/public/gallery_bottomright.webp";
 
 const GalleryGrid = () => {
   return (
-    <div className="relative flex w-1/2 flex-col items-center gap-2">
+    <div className="relative flex flex-col items-center gap-2">
       <div className="flex gap-2">
         <Image
           src={topLeft}
