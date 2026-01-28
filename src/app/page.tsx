@@ -1,5 +1,4 @@
 import Example from "@/app/example";
-import Footer from "@/components/footer";
 
 const Home = () => {
   return (
@@ -7,7 +6,6 @@ const Home = () => {
       <div className="flex h-screen w-screen items-center justify-center">
         <Example text1="Adjust" text2="These" text3="Props" />
       </div>
-      <Footer />
     </div>
   );
 };

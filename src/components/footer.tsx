@@ -6,10 +6,10 @@ import FooterArrow from "@/public/footer-arrow.svg";
 
 const Footer = () => {
   return (
-    <div className="border-archery-blue-600 border-t-3">
+    <div className="border-archery-blue-500 border-t-3">
       <div className="flex items-center justify-between p-2">
-        <div className="space-y-3 py-5">
-          <p className="text-archery-blue-600 mt-5 pl-9 text-lg">
+        <div className="space-y-3 p-8">
+          <p className="text-archery-blue-500 mt-5 pl-9 text-lg">
             Contact Us :
           </p>
           {footerLinks.map(({ icon: Icon, url, text }, index) => (
@@ -17,22 +17,20 @@ const Footer = () => {
               key={index}
               href={url}
               target="_blank"
-              className="text-archery-grey-300 flex items-center gap-2 pl-9"
+              className="text-archery-grey-200 flex items-center gap-2 pl-9"
             >
-              <Icon className="fill-archery-blue-600 h-6 w-6" />
+              <Icon className="fill-archery-blue-500 h-6 w-6" />
               {text}
             </Link>
           ))}
         </div>
-        <div>
-          <Image src={ArcheryLogo} alt="Archery Club Logo" className="pr-10" />
-        </div>
+        <Image src={ArcheryLogo} alt="Archery Club Logo" className="pr-10" />
       </div>
-      <div className="border-archery-blue-600 relative border-t-3 py-3">
+      <div className="border-archery-blue-500 relative border-t-3 py-3">
         <Image
           src={FooterArrow}
           alt="Footer Arrow"
-          className="absolute top-0 right-10 -translate-y-1/2"
+          className="absolute top-0 right-10 -translate-y-[56%]"
         />
 
         <p className="text-archery-grey-200 mt-5 text-center text-xs">

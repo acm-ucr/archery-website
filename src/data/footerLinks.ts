@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
-import { FaInstagram, FaEnvelope } from "react-icons/fa";
-
+import { FaInstagram } from "react-icons/fa";
+import { GoMail } from "react-icons/go";
 interface FooterLink {
   icon: IconType;
   url: string;
@@ -9,7 +9,7 @@ interface FooterLink {
 
 export const footerLinks: FooterLink[] = [
   {
-    icon: FaEnvelope,
+    icon: GoMail,
     url: "mailto:ucrarcheryclub@gmail.com",
     text: "ucrarcheryclub@gmail.com",
   },
