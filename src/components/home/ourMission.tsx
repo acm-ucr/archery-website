@@ -16,13 +16,13 @@ const Mission = ({ title_our, title_mission }: MissionProps) => {
 
       <div className="max-w-4xl text-center text-lg font-normal text-black">
         <p>
-          UCR Archery Club strives to teach those of various skill levels the
-          fundamentals of archery and grow their skills overtime. We train our
-          archers to also become familiar with equipment, target shooting, and
-          competitive skills. Our hope is to prepare UCR students to be
-          competitive in regional and national tournaments in the coming school
-          years and set goals for personal discipline within and outside of the
-          sport.
+          <span className="font-bold text-blue-800">UCR Archery Club</span>{" "}
+          strives to teach those of various skill levels the fundamentals of
+          archery and grow their skills overtime. We train our archers to also
+          become familiar with equipment, target shooting, and competitive
+          skills. Our hope is to prepare UCR students to be competitive in
+          regional and national tournaments in the coming school years and set
+          goals for personal discipline within and outside of the sport.
         </p>
       </div>
     </section>
