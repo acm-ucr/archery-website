@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="border-archery-blue-500 border-t-3">
       <div className="flex items-center justify-between p-2">
         <div className="space-y-3 p-8">
-          <p className="text-archery-blue-500 mt-5 pl-9 text-lg">
+          <p className="text-archery-blue-500 pl-9 text-lg font-bold">
             Contact Us :
           </p>
           {footerLinks.map(({ icon: Icon, url, text }, index) => (
