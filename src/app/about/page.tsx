@@ -1,5 +1,9 @@
+import AboutLanding from "@/components/about/aboutLanding";
+
 const AboutPage = () => {
-  return <div>page</div>;
+  return <div>
+    <AboutLanding />
+  </div>;
 };
 
 export default AboutPage;
