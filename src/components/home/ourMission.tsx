@@ -5,14 +5,14 @@ interface MissionProps {
 
 const Mission = ({ title_our, title_mission }: MissionProps) => {
   return (
-    <section className="flex flex-col items-center justify-center gap-10 p-8">
-      <h2 className="flex flex-row gap-6 text-center text-6xl font-black">
+    <div className="flex flex-col items-center justify-center gap-10 p-8">
+      <div className="flex flex-row gap-6 text-center text-6xl font-black">
         <span className="text-black">{title_our}</span>
 
         <span className="from-archery-yellow-300 to-archery-blue-400 bg-gradient-to-r from-25% to-75% bg-clip-text text-transparent">
           {title_mission}
         </span>
-      </h2>
+      </div>
 
       <div className="max-w-4xl text-center text-lg font-normal text-black">
         <p>
@@ -25,7 +25,7 @@ const Mission = ({ title_our, title_mission }: MissionProps) => {
           goals for personal discipline within and outside of the sport.
         </p>
       </div>
-    </section>
+    </div>
   );
 };
 
