@@ -19,19 +19,12 @@ const InvolvedCard = ({
 }: InvolvedProps) => {
   return (
     <div
-      className="flex h-[35vh] w-[45vw] items-center justify-center rounded-2xl border-1 border-solid"
-      style={{
-        backgroundColor: bgColor,
-        borderColor: borderColor,
-      }}
+      className={`flex h-[35vh] w-[45vw] items-center justify-center rounded-2xl border-1 border-solid ${bgColor} ${borderColor}`}
     >
       <div>
         <div className="mb-8 flex items-center gap-x-8">
           <div
-            className="flex h-[8vh] w-[4vw] items-center justify-center rounded-2xl"
-            style={{
-              backgroundColor: iconBG,
-            }}
+            className={`flex h-[8vh] w-[4vw] items-center justify-center rounded-2xl ${iconBG}`}
           >
             <Image
               src={icon}
