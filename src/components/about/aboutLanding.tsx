@@ -24,17 +24,17 @@ const AboutLanding = () => {
       <Image
         src={TargetCenter}
         alt="Part of Center of Target"
-        className="absolute inset-x-324 inset-y-97 z-10 w-3"
+        className="absolute inset-x-324 inset-y-97 z-10 w-4"
       />
       <Image
         src={TargetCenter}
         alt="Part of Center of Target"
-        className="absolute inset-x-324 inset-y-97 z-10 w-3 scale-x-[-1] -rotate-6"
+        className="absolute inset-x-324 inset-y-97 z-10 w-4 scale-x-[-1] -rotate-10"
       />
       <Image
         src={Arrow}
         alt="Image of an arrow"
-        className="absolute inset-x-266 inset-y-85 z-20 w-1/6"
+        className="absolute inset-x-245 inset-y-87 z-20 w-1/4 -rotate-12"
       />
       <Image
         src={ArrowTip}
@@ -44,7 +44,7 @@ const AboutLanding = () => {
       <Image
         src={Arrow}
         alt="Image of an arrow"
-        className="absolute inset-x-268 inset-y-90 z-20 w-1/6"
+        className="absolute inset-x-249 inset-y-93.5 z-20 w-1/4 -rotate-15"
       />
       <Image
         src={ArrowTip}
@@ -54,7 +54,7 @@ const AboutLanding = () => {
       <Image
         src={Arrow}
         alt="Image of an arrow"
-        className="absolute inset-x-255 inset-y-92 z-20 w-1/6"
+        className="absolute inset-x-225 inset-y-85 z-20 w-1/4"
       />
       <Image
         src={ArrowTip}
