@@ -5,11 +5,7 @@ const BoardPage = () => {
   return (
     <div>
       <Header title="Board" />
-      <Card
-        imageSrc="/boardMemberIcon.png"
-        name="First Last Name"
-        position="position"
-      />
+      <Card name="First Last Name" position="position" />
     </div>
   );
 };
