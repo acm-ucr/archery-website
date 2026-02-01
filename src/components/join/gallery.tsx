@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Warning from "@/public/Box Important.svg";
+import Warning from "@/public/Box_Important.svg";
 import SalaryMan from "@/public/Salary_male.svg";
 import Target from "@/public/Target_Weld.svg";
 import GalleryGrid from "./galleryGrid";
