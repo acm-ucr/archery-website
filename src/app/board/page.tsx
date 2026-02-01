@@ -1,6 +1,6 @@
 import Header from "@/components/header";
 import Card from "@/components/board/card";
-import Icon from "@/public/boardMemberIcon.png"
+import Icon from "@/public/boardMemberIcon.png";
 
 const BoardPage = () => {
   return (
