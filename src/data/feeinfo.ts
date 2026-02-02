@@ -1,19 +1,19 @@
 export interface FeeinfoType {
   title: string;
-  description: string;
+  details: string;
 }
 
 export const Feeinfo: FeeinfoType[] = [
   {
     title: "Equipment",
-    description: " : bows, arrows, targets, safety equipment",
+    details: " : bows, arrows, targets, safety equipment",
   },
   {
     title: "Coaching",
-    description: " : USA Archery Lv.2 certified coaches and officers",
+    details: " : USA Archery Lv.2 certified coaches and officers",
   },
   {
     title: "Competitions",
-    description: " : first qualifier, finals or nationals",
+    details: " : first qualifier, finals or nationals",
   },
 ];

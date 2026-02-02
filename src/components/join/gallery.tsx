@@ -55,10 +55,10 @@ const Gallery = () => {
           </div>
         </div>
         <div className="mr-8 flex w-5/8 flex-col gap-6 justify-self-end text-start">
-          {Feeinfo.map(({ title, description }, index) => (
+          {Feeinfo.map(({ title, details }, index) => (
             <p key={index} className="text-archery-grey-400 text-2xl">
               <span className="underline">{title}</span>
-              {description}
+              {details}
             </p>
           ))}
         </div>
