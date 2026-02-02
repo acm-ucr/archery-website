@@ -1,9 +1,9 @@
-import React from "react";
 import Image from "next/image";
 import Warning from "@/public/Box_Important.svg";
 import SalaryMan from "@/public/Salary_male.svg";
 import Target from "@/public/Target_Weld.svg";
 import GalleryGrid from "./galleryGrid";
+import { Feeinfo } from "@/data/feeinfo";
 
 const Gallery = () => {
   return (
@@ -19,7 +19,7 @@ const Gallery = () => {
         <GalleryGrid />
       </div>
       <div className="col-start-2 row-span-1 row-start-2 w-3/4 flex-col justify-self-center text-center">
-        <div className="my-8 flex items-center justify-center">
+        <div className="my-8 flex items-center justify-center gap-4">
           <Image
             src={SalaryMan}
             alt="Membership Fee"
@@ -55,21 +55,12 @@ const Gallery = () => {
           </div>
         </div>
         <div className="mr-8 flex w-5/8 flex-col gap-6 justify-self-end text-start">
-          <p className="text-archery-grey-400 text-2xl">
-            {" "}
-            <span className="underline">Equipment</span> : bows, arrows,
-            targets, safety equipment
-          </p>
-          <p className="text-archery-grey-400 text-2xl">
-            {" "}
-            <span className="underline">Coaching</span> : USA Archery Lv.2
-            certified coaches and officers
-          </p>
-          <p className="text-archery-grey-400 text-2xl">
-            {" "}
-            <span className="underline">Competitions</span> : first qualifier,
-            finals or nationals
-          </p>
+          {Feeinfo.map(({ title, description }, index) => (
+            <p key={index} className="text-archery-grey-400 text-2xl">
+              <span className="underline">{title}</span>
+              {description}
+            </p>
+          ))}
         </div>
       </div>
     </div>
