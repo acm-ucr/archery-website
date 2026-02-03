@@ -7,13 +7,10 @@ interface CardProps {
 }
 const Card = ({ src, name, position }: CardProps) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-1 p-4">
+    
+    <div className="flex flex-col items-center justify-center gap-1 p-4 text-archery-grey-300">
       <div className="mb-5 w-1/2 max-w-xs">
-        <Image
-          src={src}
-          alt="Board Member Icon"
-          className="block h-auto w-full"
-        />
+        <Image src={src} alt="Board Member Icon" className="w-full" />
       </div>
 
       <div className="text-2xl font-bold">{position}</div>
