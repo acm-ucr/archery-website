@@ -6,7 +6,7 @@ interface MissionProps {
 const Mission = ({ title_our, title_mission }: MissionProps) => {
   return (
     <div className="flex flex-col items-center justify-center gap-10 p-8">
-      <div className="flex flex-row gap-6 text-center text-6xl font-black">
+      <div className="flex flex-row gap-6 text-center text-6xl font-extrabold">
         <span className="text-black">{title_our}</span>
 
         <span className="from-archery-yellow-300 to-archery-blue-400 bg-gradient-to-r from-25% to-75% bg-clip-text text-transparent">
@@ -14,9 +14,11 @@ const Mission = ({ title_our, title_mission }: MissionProps) => {
         </span>
       </div>
 
-      <div className="max-w-4xl text-center text-lg font-normal text-black">
+      <div className="text-archery-grey-200 max-w-4xl text-center text-xl">
         <p>
-          <span className="font-bold text-blue-800">UCR Archery Club</span>{" "}
+          <span className="text-archery-blue-700 font-bold">
+            UCR Archery Club
+          </span>{" "}
           strives to teach those of various skill levels the fundamentals of
           archery and grow their skills overtime. We train our archers to also
           become familiar with equipment, target shooting, and competitive
