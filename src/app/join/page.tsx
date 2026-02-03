@@ -1,12 +1,12 @@
 import Header from "@/components/header";
 import FAQ from "@/components/join/faq";
-import GalleryGrid from "@/components/join/galleryGrid";
+import Gallery from "@/components/join/gallery";
 
 const JoinPage = () => {
   return (
     <>
       <Header title="Join" subTitle="Archery @UCR" />
-      <GalleryGrid />
+      <Gallery />
       <FAQ />
     </>
   );
