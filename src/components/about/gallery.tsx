@@ -1,18 +1,9 @@
 import GalleryCard from "@/components/about/gallerycard";
-import galleryWestRegionals from "@/public/galleryWestRegionals.webp";
-import gallerySIACC from "@/public/gallerySIACC.webp";
-import galleryIndoorNationals from "@/public/galleryIndoorNationals.webp";
-import galleryBanquet from "@/public/galleryBanquet.webp";
+import { galleryItems } from "@/data/gallerycards";
 import galleryBackground from "@/public/galleryBackground.webp";
 import Image from "next/image";
 
 const Gallery = () => {
-  const galleryItems = [
-    { title: "West\nRegionals", image: galleryWestRegionals },
-    { title: "SIACC", image: gallerySIACC },
-    { title: "Indoor\nNationals", image: galleryIndoorNationals },
-    { title: "Banquet", image: galleryBanquet },
-  ];
   return (
     <div className="relative min-h-screen w-full py-12 md:py-20">
       <Image
@@ -20,13 +11,12 @@ const Gallery = () => {
         alt="Gallery Background"
         fill
         className="object-cover contrast-50"
-        priority
       />
-
-      <div className="relative z-10 container mx-auto px-8 md:px-16">
+      <div className="absolute inset-0 bg-gradient-to-b from-black/5 to-black/15"></div>
+      <div className="relative container mx-auto px-8 md:px-16">
         <div className="grid grid-cols-1 gap-4 p-8 md:grid-cols-2 md:gap-12">
-          {galleryItems.map((item, index) => (
-            <GalleryCard key={index} title={item.title} image={item.image} />
+          {galleryItems.map(({ title, image }, index) => (
+            <GalleryCard key={index} title={title} image={image} />
           ))}
         </div>
       </div>
