@@ -23,8 +23,12 @@ const Carousel = () => {
         ref={marqueeReference}
       >
         {CarouselImages.map(({ image, alt }, index) => (
-          <div key={index} className="">
-            <Image src={image} alt={alt} className="h-[40vh] w-auto" />
+          <div key={index}>
+            <Image
+              src={image}
+              alt={alt}
+              className="min-h-[40vh] min-w-[20vw]"
+            />
           </div>
         ))}
       </div>
@@ -33,8 +37,12 @@ const Carousel = () => {
         style={{ animationDuration: duration }}
       >
         {CarouselImages.map(({ image, alt }, index) => (
-          <div key={index} className="">
-            <Image src={image} alt={alt} className="h-[40vh] w-auto" />
+          <div key={index}>
+            <Image
+              src={image}
+              alt={alt}
+              className="min-h-[40vh] min-w-[20vw]"
+            />
           </div>
         ))}
       </div>
