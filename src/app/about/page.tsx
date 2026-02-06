@@ -1,5 +1,10 @@
+import WhatWeOffer from "@/components/about/whatWeOffer";
 const AboutPage = () => {
-  return <div>page</div>;
+  return (
+    <>
+      <WhatWeOffer />
+    </>
+  );
 };
 
 export default AboutPage;
