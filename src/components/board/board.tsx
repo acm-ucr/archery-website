@@ -1,15 +1,5 @@
 import Card from "@/components/board/card";
-import Icon from "@/public/boardMemberIcon.png";
-
-const boardMembers = [
-  { src: Icon, name: "First Last Name", position: "position" },
-  { src: Icon, name: "First Last Name", position: "position" },
-  { src: Icon, name: "First Last Name", position: "position" },
-  { src: Icon, name: "First Last Name", position: "position" },
-  { src: Icon, name: "First Last Name", position: "position" },
-  { src: Icon, name: "First Last Name", position: "position" },
-  { src: Icon, name: "First Last Name", position: "position" },
-];
+import { boardMembers } from "@/data/boardMembers";
 
 const Board = () => {
   return (
