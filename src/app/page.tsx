@@ -1,9 +1,9 @@
-import Example from "@/app/example";
+import Mission from "@/components/home/ourMission";
 
 const Home = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      <Example text1="Adjust" text2="These" text3="Props" />
+      <Mission title_our="Our" title_mission="Mission" />
     </div>
   );
 };
