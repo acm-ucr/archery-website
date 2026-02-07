@@ -16,7 +16,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="relative mt-10 mb-10 hidden w-full overflow-hidden py-[2vh] md:flex">
+    <div className="relative mt-20 mb-10 hidden w-full overflow-hidden py-[2vh] md:flex">
       <div
         className="animate-marquee flex gap-x-4 px-[1vw]"
         style={{ animationDuration: duration }}
