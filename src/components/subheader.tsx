@@ -4,9 +4,9 @@ interface SubheaderProps {
 
 const Subheader = ({ name }: SubheaderProps) => {
   return (
-    <h2 className="text-archery-grey-300 text-center text-8xl font-extrabold">
+    <div className="text-archery-grey-300 text-center text-8xl font-extrabold">
       {name}
-    </h2>
+    </div>
   );
 };
 
