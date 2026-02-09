@@ -8,6 +8,7 @@
   --color-archery-blue-400: #003db8;
   --color-archery-blue-500: #0a3386;
   --color-archery-blue-600: #4766a4;
+  --color-archery-blue-700: #093897;
 
   --color-archery-pink-100: #ffb7b8;
   --color-archery-pink-200: #ff8e8f;
@@ -22,4 +23,30 @@
   --color-archery-yellow-300: #af8300;
 
   --font-archery-kaushan: "Kaushan Script", cursive;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-continuation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee-continuation {
+  animation: marquee-continuation 20s linear infinite;
 }

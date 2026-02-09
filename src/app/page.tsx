@@ -1,12 +1,12 @@
-import Example from "@/app/example";
+import Mission from "@/components/home/ourMission";
+import Carousel from "@/components/home/carousel";
 
 const Home = () => {
   return (
-    <div className="flex min-h-screen flex-col justify-between">
-      <div className="flex h-screen w-screen items-center justify-center">
-        <Example text1="Adjust" text2="These" text3="Props" />
-      </div>
-    </div>
+    <>
+      <Mission title_our="Our" title_mission="Mission" />
+      <Carousel />
+    </>
   );
 };
 

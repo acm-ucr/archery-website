@@ -1,11 +1,5 @@
-import Gallery from "@/components/about/gallery";
-
 const AboutPage = () => {
-  return (
-    <>
-      <Gallery />
-    </>
-  );
+  return <div>page</div>;
 };
 
 export default AboutPage;
