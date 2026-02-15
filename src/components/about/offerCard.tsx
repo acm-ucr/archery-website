@@ -24,15 +24,15 @@ export const OfferCard = ({
       <div
         className={`flex h-[5vh] w-[25vw] items-center justify-center rounded-4xl p-2 ${tabColor} mb-8`}
       >
-        <p className="text-archery-blue-600 text-xl font-semibold">{title}</p>
+        <p className="text-archery-blue-600 text-2xl font-semibold">{title}</p>
       </div>
       <div
-        className={`flex h-[50vh] w-[25vw] justify-center rounded-4xl border-3 bg-white text-center ${borderColor}`}
+        className={`flex h-[55vh] w-[25vw] justify-center rounded-4xl border-3 bg-white text-start ${borderColor}`}
       >
-        <div className="flex h-auto w-[16vw] flex-col justify-center">
+        <div className="flex w-2/3 flex-col justify-center">
           {sections?.map(({ title, description }, index) => (
             <div key={index} className="py-2">
-              <p className="text-archery-grey-200 text-l py-2 font-semibold">
+              <p className="text-archery-grey-200 py-2 text-xl font-semibold">
                 {title}
               </p>
               <p className="text-archery-grey-200 text-base font-light">
@@ -43,7 +43,7 @@ export const OfferCard = ({
 
           {lists?.map(({ title, listItems }, index) => (
             <div key={index} className="py-2">
-              <p className="text-archery-grey-200 text-l py-2 font-semibold">
+              <p className="text-archery-grey-200 py-2 text-xl font-semibold">
                 {title}
               </p>
               {listItems.map((item, index) => (
