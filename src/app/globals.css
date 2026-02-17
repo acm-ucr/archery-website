@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -20,6 +21,8 @@
   --color-archery-yellow-100: #f0dd96;
   --color-archery-yellow-200: #ffd647;
   --color-archery-yellow-300: #af8300;
+
+  --font-archery-kaushan: "Kaushan Script", cursive;
 }
 
 @keyframes marquee {
