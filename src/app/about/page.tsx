@@ -1,10 +1,9 @@
-import AboutLanding from "@/components/about/aboutLanding";
-
+import WhatWeOffer from "@/components/about/whatWeOffer";
 const AboutPage = () => {
   return (
-    <div>
-      <AboutLanding />
-    </div>
+    <>
+      <WhatWeOffer />
+    </>
   );
 };
 
