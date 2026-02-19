@@ -3,7 +3,7 @@ import { boardMembers } from "@/data/boardMembers";
 
 const Board = () => {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-10">
+    <div className="my-25 flex flex-wrap items-center justify-center gap-10">
       {boardMembers.map((member, index) => (
         <Card
           key={index}
