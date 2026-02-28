@@ -1,4 +1,4 @@
-import BowAndArrow from "@/public/Archer Art.svg";
+import BowAndArrow from "@/public/ArcherArt.svg";
 import BlueBlur from "@/public/BlueBlurCircle.svg";
 import YellowBlur from "@/public/YellowBlurCircle.svg";
 import Image from "next/image";
@@ -24,8 +24,8 @@ const HomeLanding = () => {
           <div className="mx-7">provided</div>
         </div>
       </div>
-      <div className="bg-archery-grey-100 absolute left-56 mb-22 h-16 w-0.5"></div>
-      <div className="bg-archery-grey-100 absolute left-97 mb-22 h-16 w-0.5"></div>
+      <div className="bg-archery-grey-100 absolute left-56 mb-22 h-16 w-0.5" />
+      <div className="bg-archery-grey-100 absolute left-97 mb-22 h-16 w-0.5" />
       <div className="relative">
         <Image
           src={BowAndArrow}
