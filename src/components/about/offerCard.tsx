@@ -34,7 +34,7 @@ export const OfferCard = ({
         <div className="flex w-2/3 flex-col justify-center">
           {sections?.map(({ title, description }, index) => (
             <div key={index} className="py-2">
-              <p className="text-archery-grey-200 text-s py-0 font-semibold md:py-2 md:text-base lg:py-0 lg:text-xl">
+              <p className="text-archery-grey-200 text-s font-semibold sm:py-0 md:py-2 md:text-base lg:py-0 lg:text-xl xl:py-2">
                 {title}
               </p>
               <p className="text-archery-grey-200 text-xs font-light md:text-base">
@@ -45,7 +45,7 @@ export const OfferCard = ({
 
           {lists?.map(({ title, listItems }, index) => (
             <div key={index} className="py-2">
-              <p className="text-archery-grey-200 text-s py-0 font-semibold md:py-2 md:text-base lg:py-0 lg:text-xl">
+              <p className="text-archery-grey-200 text-s font-semibold sm:py-0 md:py-2 md:text-base lg:py-0 lg:text-xl xl:py-2">
                 {title}
               </p>
               {listItems.map((item, index) => (
