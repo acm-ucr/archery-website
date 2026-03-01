@@ -9,7 +9,7 @@ const WhatWeOffer = () => {
           What We Offer
         </p>
       </div>
-      <div className="static mb-[5vh] flex h-full w-full flex-col items-center justify-center md:relative md:my-[15vh] md:h-[45vh] md:w-[90vw]">
+      <div className="static mb-[5vh] flex h-full w-full flex-col items-center justify-center md:relative md:my-[15vh] md:h-[40vh] md:w-[90vw] lg:h-[35vh] xl:h-[50vh]">
         {OfferCardData.map(
           (
             { title, borderColor, tabColor, sections, lists, position },
