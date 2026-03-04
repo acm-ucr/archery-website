@@ -9,12 +9,12 @@ import { MenuIcon } from "lucide-react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => setIsOpen(!isOpen);
-  //const closeMenu = () => setIsOpen(false);
+  const closeMenu = () => setIsOpen(false);
   return (
     <div className="flex flex-col shadow-md">
       <div className="flex w-full items-center justify-between ">
         <Link href="/" className="mt-2 ml-2">
-          <Image src={NavbarLogo} alt="NavbarLogo" className="w-full lg:w-1/3" />
+          <Image src={NavbarLogo} onClick={closeMenu} alt="NavbarLogo" className="w-full lg:w-1/3" />
         </Link>
 
 
@@ -31,10 +31,9 @@ const Navbar = () => {
         </div>
 
         <div className="md:hidden p-4">
+
+          <MenuIcon size={32} onClick={handleClick} className="text-archery-blue-600 "/>
           
-          <Link href="/">
-            <MenuIcon size={32} onClick={handleClick} className="text-archery-blue-600"/>
-          </Link>
         </div>
 
     </div>
@@ -44,6 +43,7 @@ const Navbar = () => {
         <Link
           key={index}
           href={link}
+          onClick={closeMenu}
           className={`last:bg-archery-blue-600 flex items-center justify-center px-4 text-black last:rounded-full last:text-white`}
         >
           {name}
