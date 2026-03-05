@@ -9,7 +9,7 @@ const OfferCardsData: OfferCardData[] = [
     title: "Workshops",
     tabColor: "bg-archery-yellow-100",
     borderColor: "border-archery-yellow-100",
-    position: "left-[11vw]",
+    position: "left-[-3vw] xl:left-[11vw] lg:left-[0vw]",
     sections: [
       {
         title: "Arrow Assembly",
@@ -29,7 +29,7 @@ const OfferCardsData: OfferCardData[] = [
     title: "Tournaments",
     tabColor: "bg-archery-pink-100",
     borderColor: "border-archery-pink-100",
-    position: "left-[32vw]",
+    position: "left-[27vw] xl:left-[32vw] lg:left-[28vw]",
     lists: [
       {
         title: "We participate in collegiate and National tournaments!",
@@ -46,7 +46,7 @@ const OfferCardsData: OfferCardData[] = [
     title: "Leadership",
     tabColor: "bg-archery-blue-100",
     borderColor: "border-archery-blue-100",
-    position: "left-[53vw]",
+    position: "left-[57vw] xl:left-[53vw] lg:left-[56vw]",
     sections: [
       {
         title: "Join Our Board!",
