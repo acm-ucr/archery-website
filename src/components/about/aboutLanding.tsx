@@ -8,29 +8,25 @@ const AboutLanding = () => {
   return (
     <div className="relative flex items-center justify-between">
       <div className="z-10 flex-col items-start pl-10 text-left md:mx-20 md:p-8">
-        <div className="flex gap-2 pr-10 lg:gap-7 lg:pr-0">
-          <p className="from-archery-blue-400 via-archery-yellow-300 to-archery-grey-300 bg-gradient-to-r from-10% via-80% to-200% bg-clip-text text-2xl font-black text-transparent lg:text-8xl">
+        <div className="flex gap-2 pr-10 md:gap-4 lg:gap-7 lg:pr-0">
+          <p className="from-archery-blue-400 via-archery-yellow-300 to-archery-grey-300 bg-gradient-to-r from-10% via-80% to-200% bg-clip-text text-2xl font-black text-transparent md:mt-5 md:text-5xl lg:text-8xl">
             About
           </p>
-          <p className="text-archery-grey-300 text-2xl font-black lg:text-8xl">
+          <p className="text-archery-grey-300 text-2xl font-black md:mt-5 md:text-5xl lg:text-8xl">
             Us
           </p>
         </div>
-        <p className="mr-6 text-[9px] font-light lg:mr-0 lg:pt-6 lg:text-2xl">
+        <p className="mr-6 text-[9px] font-light md:mt-3 md:text-[20px] lg:mr-0 lg:pt-6 lg:text-2xl">
           Join Archery club where recreation meets competition. From beginners
           to experienced archers, everyone is welcome to discover the art of
           archery!
         </p>
-        <p className="hidden pt-32 text-center font-extralight sm:block">
-          learn more about us
-        </p>
-        <Image
-          src={DownButton}
-          alt="Down Button"
-          className="hidden w-4 sm:block md:mx-17 lg:ml-54"
-        />
+        <div className="hidden flex-col items-center pt-32 sm:flex">
+          <p className="text-center font-extralight">learn more about us</p>
+          <Image src={DownButton} alt="Down Button" className="w-4" />
+        </div>
       </div>
-      <div className="relative">
+      <div className="relative w-[150vw] lg:w-[200vw]">
         <Image src={Target} alt="Target" className="z-10 h-auto w-full" />
         <Image
           src={TargetCenter}
