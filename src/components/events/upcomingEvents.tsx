@@ -20,7 +20,6 @@ const UpcomingEvents = ({
   description,
 }: Events) => {
   return (
-    /*Desktop Date*/
     <div className="flex w-3/4 flex-col gap-8 justify-self-center p-5 md:flex-row">
       <div className="hidden md:flex">
         <div className="text-archery-blue-500 flex flex-row items-center justify-center gap-2 px-8 text-3xl font-bold md:flex-col md:text-5xl">
@@ -30,7 +29,6 @@ const UpcomingEvents = ({
       </div>
 
       <div className="border-archery-blue-500 mx-8 flex flex-col gap-6 border-b-2 py-6 md:border-y-2">
-        {/*Mobile Date*/}
         <div className="flex w-full items-center md:hidden">
           <div className="border-archery-blue-500 flex-grow border-t-2"></div>
           <div className="text-archery-blue-500 flex gap-2 px-4 text-3xl font-bold">
@@ -45,11 +43,11 @@ const UpcomingEvents = ({
             {title}
           </p>
           <div className="my-2 flex items-center gap-1">
-            <IoTimeOutline className="text-archery-blue-500 text-1xl md:text-2xl" />
+            <IoTimeOutline className="text-archery-blue-500 text-xl md:text-2xl" />
             <p className="text-archery-blue-500 mr-4 ml-1 text-lg font-bold">
               {startTime} - {endTime}
             </p>
-            <MdOutlineLocationOn className="text-archery-blue-500 text-1xl md:text-2xl" />
+            <MdOutlineLocationOn className="text-archery-blue-500 text-xl md:text-2xl" />
             <p className="text-archery-blue-500 text-lg font-bold">
               {location}
             </p>
