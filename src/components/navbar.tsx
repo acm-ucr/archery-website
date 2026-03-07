@@ -5,13 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 import NavbarLogo from "@/public/NavBar.webp";
 import { MenuIcon } from "lucide-react";
+import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
   return (
-    <div className="flex flex-col shadow-md">
+    <div className="relative flex flex-col shadow-md">
       <div className="flex w-full items-center justify-between">
         <Link href="/" className="mt-2 ml-2">
           <Image
@@ -34,17 +35,23 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="my-2 mr-4 md:hidden">
+        <div className="text-archery-blue-600 px-4 py-2 md:hidden">
           <MenuIcon
-            size={22}
+            size={30}
             onClick={handleClick}
-            className="text-archery-blue-600"
+            className={`${isOpen ? "hidden" : ""}`}
+          />
+
+          <IoMdClose
+            size={30}
+            onClick={closeMenu}
+            className={` ${isOpen ? "" : "hidden"}`}
           />
         </div>
       </div>
 
       <div
-        className={`flex flex-col items-end overflow-hidden border-t-1 border-black/30 text-sm md:hidden ${isOpen ? "h-auto" : "hidden h-0"}`}
+        className={`absolute top-full z-50 flex w-full flex-col items-end overflow-hidden border-t-1 border-black/30 bg-white text-sm shadow-md md:hidden ${isOpen ? "h-auto" : "hidden h-0"}`}
       >
         <div className="flex w-max flex-col">
           {navbarLinks.map(({ link, name }, index) => (
