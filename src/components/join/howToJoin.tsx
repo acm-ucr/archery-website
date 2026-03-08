@@ -1,6 +1,6 @@
 import Target from "@/public/Target_Weld.svg";
 import Image from "next/image";
-import ClubSports from "@/public/ClubSports.png";
+import ClubSports from "@/public/ClubSports.webp";
 
 const HowToJoin = () => {
   return (
