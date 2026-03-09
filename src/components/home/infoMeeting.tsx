@@ -2,11 +2,14 @@ import InfoCard from "@/components/infocard";
 import { LuMapPin } from "react-icons/lu";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { IoMdCalendar } from "react-icons/io";
+import Link from "next/link";
 
 const InfoMeeting = () => {
   return (
-    <div className="flex h-full w-full justify-center bg-[radial-gradient(300px_circle_at_top_left,#0052f8_0%,#bce3fa_50%,transparent_80%),radial-gradient(300px_circle_at_bottom_right,#f0dd96_0%,#f0dd96_30%,transparent_80%)] md:bg-[radial-gradient(600px_circle_at_top_left,#0052f8_0%,#bce3fa_50%,transparent_80%),radial-gradient(600px_circle_at_bottom_right,#f0dd96_0%,#f0dd96_30%,transparent_80%)]">
-      <div className="my-12 w-[85vw] items-center rounded-2xl bg-white/50 py-8 md:h-[45vh] md:w-[75vw] lg:h-[50vh] xl:h-[60vh]">
+    <div className="relative flex h-full w-full justify-center overflow-hidden">
+      <div className="bg-archery-yellow-100 absolute right-0 bottom-0 -z-0 h-1/3 w-1/2 rounded-full blur-2xl filter md:h-1/2 md:w-1/3 md:blur-3xl" />
+      <div className="absolute top-0 left-0 -z-0 h-1/3 w-1/2 rounded-full bg-gradient-to-r from-blue-300 via-blue-400 to-blue-300 blur-3xl filter md:h-1/2 md:w-1/3" />
+      <div className="z-10 my-12 w-[85vw] items-center rounded-2xl bg-white/50 py-8 md:h-[45vh] md:w-[75vw] lg:h-[50vh] xl:h-[60vh]">
         <div className="flex h-full w-full flex-col items-center justify-center gap-[2vh]">
           <div className="mx-5 flex flex-col items-center gap-[2vh] text-center">
             <IoMdCalendar className="text-5xl text-blue-600 md:text-7xl" />
@@ -35,12 +38,13 @@ const InfoMeeting = () => {
                     Stay up-to-date
                     <br />
                     follow{" "}
-                    <a
+                    <Link
                       href="https://instagram.com/archeryatucr"
+                      target="_blank"
                       className="text-yellow-300"
                     >
                       @archeryatucr
-                    </a>{" "}
+                    </Link>{" "}
                     on Instagram
                   </p>
                 </div>
