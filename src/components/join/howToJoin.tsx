@@ -1,66 +1,90 @@
 import Target from "@/public/Target_Weld.svg";
 import Image from "next/image";
 import ClubSports from "@/public/ClubSports.png";
+import HowToJoinSide from "@/public/HowToJoinSide.png";
+import HowToJoinHeader from "@/public/HowToJoinHeader.png";
 
 const HowToJoin = () => {
   return (
-    <div className="text-archery-grey-200 flex flex-col gap-8">
-      <div className="flex items-start gap-4">
-        <div className="w-7 shrink-0">
-          <Image src={Target} alt="Target" className="w-full object-contain" />
+    <div className="mt-40 grid w-5/6 grid-cols-[3fr_2fr] gap-x-8 justify-self-center">
+      <div className="flex flex-col gap-8">
+        <div className="relative h-24 w-full">
+          <Image
+            src={HowToJoinHeader}
+            alt="How to Join Header"
+            fill
+            priority
+            className="object-contain object-left"
+          />
         </div>
 
-        <div className="flex flex-col gap-4">
-          <div className="whitespace-pre-line">
-            Complete Your
+        <div className="flex items-start gap-4">
+          <div className="w-7 shrink-0">
+            <Image src={Target} alt="Target" className="w-full object-contain" />
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <div className="whitespace-pre-line">
+              Complete Your
+              <span className="text-archery-blue-300 font-semibold">
+                {" "}
+                UCR DoSportsEasy
+              </span>{" "}
+              waiver. <br /> (Archery → Registration → fill out information)
+            </div>
+
+            <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <Image
+                src={ClubSports}
+                alt="Outer Club Sports Logo"
+                fill
+                priority
+                className="object-contain object-left"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4">
+          <div className="w-7 shrink-0">
+            <Image src={Target} alt="Target" className="w-full object-contain" />
+          </div>
+
+          <div>
+            Pay your membership fee to one of the officers <br /> and get a
+            receipt of payment.
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4">
+          <div className="w-7 shrink-0">
+            <Image src={Target} alt="Target" className="w-full object-contain" />
+          </div>
+
+          <div>
+            Request membership on{" "}
             <span className="text-archery-blue-300 font-semibold">
-              {" "}
-              UCR DoSportsEasy
-            </span>{" "}
-            waiver. <br /> (Archery → Registration → fill out information)
-          </div>
-
-          <div className="relative aspect-[4/3] w-full max-w-md overflow-hidden">
-            <Image
-              src={ClubSports}
-              alt="Outer Club Sports Logo"
-              fill
-              priority
-              className="object-contain"
-            />
+              HighlanderLink.
+            </span>
           </div>
         </div>
+
+        <div className="flex items-start gap-4">
+          <div className="w-7 shrink-0">
+            <Image src={Target} alt="Target" className="w-full object-contain" />
+          </div>
+
+          <div>Come to practice!</div>
+        </div>
       </div>
 
-      <div className="flex items-start gap-4">
-        <div className="w-7 shrink-0">
-          <Image src={Target} alt="Target" className="w-full object-contain" />
-        </div>
-
-        <div>
-          Pay your membership fee to one of the officers <br /> and get a
-          receipt of payment.
-        </div>
-      </div>
-      <div className="flex items-start gap-4">
-        <div className="w-7 shrink-0">
-          <Image src={Target} alt="Target" className="w-full object-contain" />
-        </div>
-
-        <div>
-          Request membership on{" "}
-          <span className="text-archery-blue-300 font-semibold">
-            {" "}
-            HighlanderLink.
-          </span>{" "}
-        </div>
-      </div>
-      <div className="flex items-start gap-4">
-        <div className="w-7 shrink-0">
-          <Image src={Target} alt="Target" className="w-full object-contain" />
-        </div>
-
-        <div>Come to practice!</div>
+      <div className="flex items-start justify-center">
+        <Image
+          src={HowToJoinSide}
+          alt="How to Join Side"
+          className="w-4/5 object-contain"
+          priority
+        />
       </div>
     </div>
   );
