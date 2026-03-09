@@ -1,9 +1,9 @@
 import Target from "@/public/Target_Weld.svg";
 import Image from "next/image";
 import Link from "next/link";
-import ClubSports from "@/public/ClubSports.png";
-import HowToJoinSide from "@/public/HowToJoinSide.png";
-import HowToJoinHeader from "@/public/HowToJoinHeader.png";
+import ClubSports from "@/public/ClubSports.webp";
+import HowToJoinSide from "@/public/HowToJoinSide.webp";
+import HowToJoinHeader from "@/public/HowToJoinHeader.webp";
 
 const HowToJoin = () => {
   return (
