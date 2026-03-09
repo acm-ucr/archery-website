@@ -1,5 +1,6 @@
 import Target from "@/public/Target_Weld.svg";
 import Image from "next/image";
+import Link from "next/link";
 import ClubSports from "@/public/ClubSports.png";
 import HowToJoinSide from "@/public/HowToJoinSide.png";
 import HowToJoinHeader from "@/public/HowToJoinHeader.png";
@@ -31,14 +32,14 @@ const HowToJoin = () => {
             <div className="flex flex-1 flex-col gap-3 text-sm sm:gap-4 sm:text-base">
               <div className="whitespace-pre-line">
                 Complete Your{" "}
-                <a
+                <Link
                   href="https://ucr.dserec.com/online/clubsports"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-archery-blue-300 font-semibold hover:underline"
                 >
                   UCR DoSportsEasy
-                </a>{" "}
+                </Link>{" "}
                 waiver. <br /> (Archery → Registration → fill out information)
               </div>
 
@@ -80,14 +81,14 @@ const HowToJoin = () => {
 
             <div className="flex-1 text-sm sm:text-base">
               Request membership on{" "}
-              <a
+              <Link
                 href="https://highlanderlink.ucr.edu/organization/acucr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-archery-blue-300 font-semibold hover:underline"
               >
                 HighlanderLink
-              </a>
+              </Link>
               .
             </div>
           </div>
