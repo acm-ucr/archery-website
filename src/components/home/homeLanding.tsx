@@ -8,10 +8,10 @@ const HomeLanding = () => {
     <div className="relative flex items-center justify-between">
       <div className="z-20 flex-col items-start p-8 text-left md:mx-7 lg:mx-15">
         <div className="flex flex-row gap-3 md:gap-5">
-          <p className="from-archery-blue-400 to-archery-yellow-300 bg-gradient-to-r from-15% via-50% to-80% bg-clip-text text-2xl font-black text-transparent md:text-5xl lg:text-8xl">
+          <p className="from-archery-blue-400 to-archery-yellow-300 bg-gradient-to-r from-15% via-50% to-80% bg-clip-text text-2xl font-black text-transparent md:text-5xl lg:text-7xl xl:text-8xl">
             UCR
           </p>
-          <p className="text-archery-grey-300 text-2xl font-black md:text-5xl lg:text-8xl">
+          <p className="text-archery-grey-300 text-2xl font-black md:text-5xl lg:text-7xl xl:text-8xl">
             Archery
           </p>
         </div>
