@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Warning from "@/public/Box_Important.svg";
 import SalaryMan from "@/public/Salary_male.svg";
