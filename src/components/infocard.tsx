@@ -14,7 +14,7 @@ const InfoCard: React.FC<InfoProps> = ({
   description,
 }) => {
   return (
-    <div className="border-archery-blue-500 flex w-sm items-center rounded-2xl border py-5 pr-8 pl-1">
+    <div className="border-archery-blue-500 xl:w-m flex h-[8vh] w-[75vw] items-center rounded-2xl border bg-white/60 py-5 pr-8 pl-1 md:h-[8vh] md:w-[30vw] lg:h-[9vh] lg:w-[35vw] xl:h-[12vh]">
       <div className="mr-3 flex h-12 w-12 items-center justify-center">
         <Icon className="text-archery-blue-500 text-3xl" />
       </div>
