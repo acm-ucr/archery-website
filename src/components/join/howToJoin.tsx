@@ -3,23 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import ClubSports from "@/public/ClubSports.png";
 import HowToJoinSide from "@/public/HowToJoinSide.png";
-import HowToJoinHeader from "@/public/HowToJoinHeader.png";
 
 const HowToJoin = () => {
   return (
     <div className="text-archery-grey-200 mt-20 grid w-11/12 grid-cols-1 gap-y-10 justify-self-center sm:w-5/6 lg:mt-40 lg:grid-cols-[3fr_2fr] lg:gap-x-6 lg:gap-y-0">
       <div className="flex justify-center lg:justify-center">
         <div className="flex w-full max-w-sm flex-col gap-6 sm:max-w-md lg:gap-8">
-          <div className="relative h-16 w-full sm:h-20 lg:h-24">
-            <Image
-              src={HowToJoinHeader}
-              alt="How to Join Header"
-              fill
-              priority
-              className="object-contain object-left"
-            />
+          <div className="flex justify-start">
+            <div className="from-archery-yellow-200 via-archery-pink-200 to-archery-blue-200 w-full max-w-2xl rounded-full bg-gradient-to-r px-10 py-3 text-center text-2xl font-extrabold text-white shadow-[0_6px_12px_rgba(0,0,0,0.18)] sm:px-12 sm:py-4 sm:text-3xl lg:text-4xl">
+              How To Join
+            </div>
           </div>
-
           <div className="flex items-start gap-3 sm:gap-4">
             <div className="w-5 shrink-0 sm:w-6 lg:w-7">
               <Image
@@ -111,7 +105,7 @@ const HowToJoin = () => {
         <Image
           src={HowToJoinSide}
           alt="How to Join Side"
-          className="w-3/4 max-w-xs object-contain sm:w-2/3 sm:max-w-sm lg:w-full"
+          className="w-5/6 max-w-sm object-contain sm:w-4/5 sm:max-w-md lg:w-[110%] lg:max-w-lg xl:w-[120%]"
           priority
         />
       </div>
