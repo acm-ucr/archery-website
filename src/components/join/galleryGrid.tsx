@@ -1,3 +1,4 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
 import topLeft from "@/public/gallery_topleft.webp";
 import midLeft from "@/public/gallery_midleft.webp";
@@ -5,6 +6,7 @@ import bottomLeft from "@/public/gallery_bottomleft.webp";
 import topRight from "@/public/gallery_topright.webp";
 import midRight from "@/public/gallery_midright.webp";
 import bottomRight from "@/public/gallery_bottomright.webp";
+import { motion } from "motion/react";
 
 interface imageInfo {
   imageL: StaticImageData;
@@ -30,7 +32,14 @@ const GalleryGrid = () => {
   return (
     <div className="relative flex flex-col items-center gap-2">
       {ImageProp.map(({ imageL, imageR }, index) => (
-        <div key={index} className="flex gap-2">
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex gap-2"
+        >
           <div className="relative">
             <Image
               src={imageL}
@@ -45,7 +54,7 @@ const GalleryGrid = () => {
               className="object-cover"
             />
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
