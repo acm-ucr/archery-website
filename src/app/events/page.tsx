@@ -1,5 +1,6 @@
 import UpcomingEvents from "@/components/events/upcomingEvents";
 import Header from "@/components/header";
+import Calendar from "@/components/events/calendar/calendar";
 
 const EventsPage = () => {
   return (
@@ -14,6 +15,7 @@ const EventsPage = () => {
         location="Glen mor Fields"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et suscipit magna. Fusce vestibulum sed est pharetra hendrerit. Nam consectetur elit quis magna fermentum cursus non at sapien. Quisque et pharetra leo."
       />
+      <Calendar />
     </>
   );
 };
