@@ -23,6 +23,14 @@ import { CalendarEvent } from "./types";
 const CALENDAR_EMAIL = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL!;
 const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY!;
 
+interface GoogleCalendarEvent {
+  id: string;
+  summary?: string;
+  location?: string;
+  start: { dateTime?: string; date?: string };
+  end: { dateTime?: string; date?: string };
+}
+
 const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [events, setEvents] = useState<CalendarEvent[]>([]);
@@ -54,13 +62,15 @@ const Calendar = () => {
         const res = await fetch(url.toString());
         const data = await res.json();
 
-        const mapped: CalendarEvent[] = (data.items || []).map((item: any) => ({
-          id: item.id,
-          title: item.summary || "No Title",
-          start: new Date(item.start.dateTime || item.start.date),
-          end: new Date(item.end.dateTime || item.end.date),
-          location: item.location,
-        }));
+        const mapped: CalendarEvent[] = (data.items || []).map(
+          (item: GoogleCalendarEvent) => ({
+            id: item.id,
+            title: item.summary || "No Title",
+            start: new Date(item.start.dateTime || item.start.date!),
+            end: new Date(item.end.dateTime || item.end.date!),
+            location: item.location,
+          }),
+        );
 
         setEvents(mapped);
       } catch (err) {
