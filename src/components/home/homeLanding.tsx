@@ -7,12 +7,13 @@ import { motion } from "motion/react";
 
 const HomeLanding = () => {
   return (
-    <div className="relative flex items-center justify-between">
+    <div className="relative flex h-fit min-h-[200px] items-center justify-center overflow-hidden md:min-h-[400px] lg:min-h-screen">
       <motion.div
-        className="z-20 flex-col items-start p-8 text-left md:mx-7 lg:mx-15"
+        className="z-20 flex flex-col items-start p-8 text-left md:mx-7 lg:mx-15"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.25 }}
+        viewport={{ once: true }}
       >
         <div className="flex flex-row gap-3 md:gap-5">
           <p className="from-archery-blue-400 to-archery-yellow-300 bg-gradient-to-r from-15% via-50% to-80% bg-clip-text text-2xl font-black text-transparent md:text-5xl lg:text-7xl xl:text-8xl">
@@ -60,11 +61,12 @@ const HomeLanding = () => {
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.25 }}
+        viewport={{ once: true }}
       >
         <Image
           src={BowAndArrow}
           alt="Image of a bow and arrow"
-          className="z-10 w-[100vw] lg:w-full"
+          className="z-10 w-full"
         />
 
         <div className="absolute inset-0 mt-2 bg-gradient-to-r from-white from-0% via-white via-13% to-transparent to-30%" />
