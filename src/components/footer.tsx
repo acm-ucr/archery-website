@@ -29,7 +29,7 @@ const Footer = () => {
         <Image
           src={ArcheryLogo}
           alt="Archery Club Logo"
-          className="h-auto w-1/2 p-6 pr-3 md:w-auto md:pr-10"
+          className="h-auto w-1/3 p-6 pr-3 md:w-auto md:pr-10"
         />
       </div>
       <div className="border-archery-blue-500 relative border-t-3 py-3">
