@@ -7,24 +7,30 @@ import FooterArrow from "@/public/footer-arrow.svg";
 const Footer = () => {
   return (
     <div className="border-archery-blue-500 border-t-3">
-      <div className="flex items-center justify-between p-2">
-        <div className="space-y-3 p-8">
-          <p className="text-archery-blue-500 pl-9 text-lg font-bold">
+      <div className="flex flex-row-reverse items-center justify-center gap-1 p-2 md:flex-row md:justify-between">
+        <div className="space-y-3 md:p-8">
+          <p className="text-archery-blue-500 text-md font-bold md:pl-9 md:text-lg">
             Contact Us :
           </p>
-          {footerLinks.map(({ icon: Icon, url, text }, index) => (
-            <Link
-              key={index}
-              href={url}
-              target="_blank"
-              className="text-archery-grey-200 flex items-center gap-2 pl-9"
-            >
-              <Icon className="fill-archery-blue-500 h-6 w-6" />
-              {text}
-            </Link>
-          ))}
+          <div className="md:text-md pr-4 text-xs">
+            {footerLinks.map(({ icon: Icon, url, text }, index) => (
+              <Link
+                key={index}
+                href={url}
+                target="_blank"
+                className="text-archery-grey-200 flex items-center gap-2 md:pl-9"
+              >
+                <Icon className="fill-archery-blue-500 h-auto w-3 md:w-6" />
+                {text}
+              </Link>
+            ))}
+          </div>
         </div>
-        <Image src={ArcheryLogo} alt="Archery Club Logo" className="pr-10" />
+        <Image
+          src={ArcheryLogo}
+          alt="Archery Club Logo"
+          className="h-auto w-1/3 p-6 pr-3 md:w-auto md:pr-10"
+        />
       </div>
       <div className="border-archery-blue-500 relative border-t-3 py-3">
         <Image
