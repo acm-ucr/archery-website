@@ -48,11 +48,13 @@ const UpcomingEvents = ({
               {startTime} - {endTime}
             </p>
             {location && (
-  <>
-    <MdOutlineLocationOn className="text-archery-blue-500 text-xl md:text-2xl" />
-    <p className="text-archery-blue-500 text-lg font-bold">{location}</p>
-  </>
-)}
+              <>
+                <MdOutlineLocationOn className="text-archery-blue-500 text-xl md:text-2xl" />
+                <p className="text-archery-blue-500 text-lg font-bold">
+                  {location}
+                </p>
+              </>
+            )}
           </div>
           <p className="text-archery-blue-500 text-lg/6">{description}</p>
         </div>

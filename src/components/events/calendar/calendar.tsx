@@ -1,6 +1,6 @@
 "use client";
-import UpcomingEvents from "@/components/events/upcomingEvents";
 
+import UpcomingEvents from "@/components/events/upcomingEvents";
 import React, { useState } from "react";
 import {
   format,
@@ -77,9 +77,12 @@ const Calendar = () => {
     },
   });
 
-  // Derive the next 3 upcoming events from today onwards
   const upcomingEvents = events
-    .filter((e) => isAfter(e.start, startOfDay(new Date())) || isSameDay(e.start, new Date()))
+    .filter(
+      (e) =>
+        isAfter(e.start, startOfDay(new Date())) ||
+        isSameDay(e.start, new Date()),
+    )
     .sort((a, b) => a.start.getTime() - b.start.getTime())
     .slice(0, 3);
 
@@ -87,26 +90,22 @@ const Calendar = () => {
     events.filter((e) => isSameDay(e.start, day));
 
   return (
-    <div className="mx-auto w-11/12 max-w-7xl bg-white p-3 sm:p-6">
-      {/* Upcoming Events Section */}
+    <div className="mx-auto w-11/12 max-w-7xl p-3 sm:p-6">
       {upcomingEvents.length > 0 && (
-        
-          
-          <div className="flex flex-col items-center">
-            {upcomingEvents.map((event) => (
-              <UpcomingEvents
-                key={event.id}
-                day={format(event.start, "EEE").toUpperCase()}
-                date={format(event.start, "d")}
-                title={event.title}
-                startTime={format(event.start, "h:mm a")}
-                endTime={format(event.end, "h:mm a")}
-                location={event.location || ""}
-                description={event.description || ""}
-              />
-            ))}
-          </div>
-        
+        <div className="flex flex-col items-center">
+          {upcomingEvents.map((event) => (
+            <UpcomingEvents
+              key={event.id}
+              day={format(event.start, "EEE").toUpperCase()}
+              date={format(event.start, "d")}
+              title={event.title}
+              startTime={format(event.start, "h:mm a")}
+              endTime={format(event.end, "h:mm a")}
+              location={event.location || ""}
+              description={event.description || ""}
+            />
+          ))}
+        </div>
       )}
 
       <div className="mb-6 flex items-center justify-center sm:hidden">
@@ -196,8 +195,6 @@ const Calendar = () => {
           ))}
         </div>
       </div>
-
-      
     </div>
   );
 };

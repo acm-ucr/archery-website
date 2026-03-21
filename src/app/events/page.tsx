@@ -5,7 +5,6 @@ const EventsPage = () => {
   return (
     <>
       <Header title="Events" />
-      
       <Calendar />
     </>
   );
