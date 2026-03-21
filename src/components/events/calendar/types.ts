@@ -4,4 +4,5 @@ export interface CalendarEvent {
   start: Date;
   end: Date;
   location?: string;
+  description?: string;
 }

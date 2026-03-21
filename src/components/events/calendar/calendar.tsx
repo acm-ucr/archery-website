@@ -1,6 +1,7 @@
 "use client";
+import UpcomingEvents from "@/components/events/upcomingEvents";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   format,
   addMonths,
@@ -13,27 +14,27 @@ import {
   isSameMonth,
   isToday,
   isSameDay,
+  isAfter,
+  startOfDay,
 } from "date-fns";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { CalendarEventCard } from "./calendarEventCard";
 import { CalendarEvent } from "./types";
-
-const CALENDAR_EMAIL = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL!;
-const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY!;
+import { useQuery } from "@tanstack/react-query";
 
 interface GoogleCalendarEvent {
   id: string;
   summary?: string;
   location?: string;
+  description?: string;
   start: { dateTime?: string; date?: string };
   end: { dateTime?: string; date?: string };
 }
 
 const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [events, setEvents] = useState<CalendarEvent[]>([]);
 
   const monthStart = startOfMonth(currentDate);
   const monthEnd = endOfMonth(monthStart);
@@ -42,50 +43,72 @@ const Calendar = () => {
   const calendarDays = eachDayOfInterval({ start: startDate, end: endDate });
   const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const monthStart = startOfMonth(currentDate);
-        const monthEnd = endOfMonth(monthStart);
-        const start = startOfWeek(monthStart);
-        const end = endOfWeek(monthEnd);
+  const { data: events = [] } = useQuery({
+    queryKey: ["calendarEvents", format(currentDate, "yyyy-MM")],
+    queryFn: async (): Promise<CalendarEvent[]> => {
+      const monthStart = startOfMonth(currentDate);
+      const monthEnd = endOfMonth(monthStart);
+      const start = startOfWeek(monthStart);
+      const end = endOfWeek(monthEnd);
 
-        const url = new URL(
-          `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_EMAIL}/events`,
-        );
-        url.searchParams.set("key", API_KEY);
-        url.searchParams.set("timeMin", start.toISOString());
-        url.searchParams.set("timeMax", end.toISOString());
-        url.searchParams.set("singleEvents", "true");
-        url.searchParams.set("orderBy", "startTime");
+      const url = new URL(
+        `https://www.googleapis.com/calendar/v3/calendars/${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL!}/events`,
+      );
+      url.searchParams.set(
+        "key",
+        process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY!,
+      );
+      url.searchParams.set("timeMin", start.toISOString());
+      url.searchParams.set("timeMax", end.toISOString());
+      url.searchParams.set("singleEvents", "true");
+      url.searchParams.set("orderBy", "startTime");
 
-        const res = await fetch(url.toString());
-        const data = await res.json();
+      const res = await fetch(url.toString());
+      const data = await res.json();
 
-        const mapped: CalendarEvent[] = (data.items || []).map(
-          (item: GoogleCalendarEvent) => ({
-            id: item.id,
-            title: item.summary || "No Title",
-            start: new Date(item.start.dateTime || item.start.date!),
-            end: new Date(item.end.dateTime || item.end.date!),
-            location: item.location,
-          }),
-        );
+      return (data.items || []).map((item: GoogleCalendarEvent) => ({
+        id: item.id,
+        title: item.summary || "No Title",
+        start: new Date(item.start.dateTime || item.start.date!),
+        end: new Date(item.end.dateTime || item.end.date!),
+        location: item.location,
+        description: item.description,
+      }));
+    },
+  });
 
-        setEvents(mapped);
-      } catch (err) {
-        console.error("Failed to fetch events", err);
-      }
-    };
-
-    fetchEvents();
-  }, [currentDate]);
+  // Derive the next 3 upcoming events from today onwards
+  const upcomingEvents = events
+    .filter((e) => isAfter(e.start, startOfDay(new Date())) || isSameDay(e.start, new Date()))
+    .sort((a, b) => a.start.getTime() - b.start.getTime())
+    .slice(0, 3);
 
   const getEventsForDay = (day: Date) =>
     events.filter((e) => isSameDay(e.start, day));
 
   return (
     <div className="mx-auto w-11/12 max-w-7xl bg-white p-3 sm:p-6">
+      {/* Upcoming Events Section */}
+      {upcomingEvents.length > 0 && (
+        
+          
+          <div className="flex flex-col items-center">
+            {upcomingEvents.map((event) => (
+              <UpcomingEvents
+                key={event.id}
+                day={format(event.start, "EEE").toUpperCase()}
+                date={format(event.start, "d")}
+                title={event.title}
+                startTime={format(event.start, "h:mm a")}
+                endTime={format(event.end, "h:mm a")}
+                location={event.location || ""}
+                description={event.description || ""}
+              />
+            ))}
+          </div>
+        
+      )}
+
       <div className="mb-6 flex items-center justify-center sm:hidden">
         <Button
           variant="ghost"
@@ -141,13 +164,13 @@ const Calendar = () => {
         ))}
       </div>
 
-      <div className="border-archery-blue-500 overflow-hidden rounded-xl border shadow-sm">
+      <div className="border-archery-blue-500 overflow-hidden rounded-lg border shadow-sm">
         <div className="grid grid-cols-7">
           {calendarDays.map((day, idx) => (
             <div
               key={idx}
               className={cn(
-                "border-archery-blue-500 min-h-[140px] border-r border-b p-2 transition-colors",
+                "border-archery-blue-500 min-h-[140px] border-r border-b transition-colors",
                 (idx + 1) % 7 === 0 && "border-r-0",
                 idx >= calendarDays.length - 7 && "border-b-0",
                 !isSameMonth(day, monthStart) && "bg-archery-grey-200/15",
@@ -164,7 +187,7 @@ const Calendar = () => {
               >
                 {format(day, "d")}
               </span>
-              <div className="flex flex-col gap-1">
+              <div className="hide-scrollbar flex flex-col gap-1 overflow-y-hidden">
                 {getEventsForDay(day).map((event) => (
                   <CalendarEventCard key={event.id} event={event} />
                 ))}
@@ -173,6 +196,8 @@ const Calendar = () => {
           ))}
         </div>
       </div>
+
+      
     </div>
   );
 };
