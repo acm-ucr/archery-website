@@ -2,15 +2,19 @@ import GalleryCard from "@/components/about/gallerycard";
 import { galleryItems } from "@/data/gallerycards";
 import galleryBackground from "@/public/galleryBackground.webp";
 import Image from "next/image";
-import Header from "@/components/header";
+import Subheader from "@/components/subheader";
 
 const Gallery = () => {
   return (
     <div>
-      <Header
-        title="Gallery"
-        subTitle="Check out our competitions and events!"
-      />
+      <div className="relative pt-25">
+        <Subheader name="Gallery" />
+      </div>
+      <div className="flex justify-center p-5 text-center text-2xl font-bold">
+        <p className="from-archery-yellow-300 to-archery-blue-300 bg-gradient-to-r bg-clip-text p-5 text-transparent">
+          Check out our competitions and events!
+        </p>
+      </div>
 
       <div className="relative min-h-screen w-full py-8 md:py-12 lg:py-20">
         <Image
