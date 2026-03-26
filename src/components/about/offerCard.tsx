@@ -24,7 +24,7 @@ export const OfferCard = ({
       <div
         className={`mx-auto flex h-[5vh] w-[40vw] items-center justify-center rounded-4xl p-2 md:w-[36vw] lg:w-[34vw] xl:w-[25vw] ${tabColor} mb-8`}
       >
-        <p className="text-archery-blue-600 text-xl font-semibold md:text-2xl">
+        <p className="text-archery-blue-600 text-lg font-semibold md:text-2xl">
           {title}
         </p>
       </div>
