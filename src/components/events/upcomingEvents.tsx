@@ -1,59 +1,36 @@
-import { IoTimeOutline } from "react-icons/io5";
-import { MdOutlineLocationOn } from "react-icons/md";
+import EventCard from "./eventcard";
+import { CalendarEvent } from "./calendar/types";
+import { format } from "date-fns";
 
-interface Events {
-  day: string;
-  date: string;
-  title: string;
-  startTime: string;
-  endTime: string;
-  location: string;
-  description: string;
+interface UpcomingEventsProps {
+  events: CalendarEvent[];
 }
-const UpcomingEvents = ({
-  day,
-  date,
-  title,
-  startTime,
-  endTime,
-  location,
-  description,
-}: Events) => {
+
+const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
   return (
-    <div className="flex w-3/4 flex-col gap-8 justify-self-center p-5 md:flex-row">
-      <div className="hidden md:flex">
-        <div className="text-archery-blue-500 flex flex-row items-center justify-center gap-2 px-8 text-3xl font-bold md:flex-col md:text-5xl">
-          <p>{day}</p>
-          <p>{date}</p>
-        </div>
+    <div className="flex flex-col items-center justify-center pb-10">
+      <div className="to-archery-blue-200 text-archery-blue-500 w-full rounded-full bg-gradient-to-r from-white from-0% to-100% text-left text-4xl font-bold">
+        Upcoming Events
       </div>
-
-      <div className="border-archery-blue-500 mx-8 flex flex-col gap-6 border-b-2 py-6 md:border-y-2">
-        <div className="flex w-full items-center md:hidden">
-          <div className="border-archery-blue-500 flex-grow border-t-2"></div>
-          <div className="text-archery-blue-500 flex gap-2 px-4 text-3xl font-bold">
-            <p>{day}</p>
-            <p>{date}</p>
-          </div>
-          <div className="border-archery-blue-500 flex-grow border-t-2"></div>
-        </div>
-
-        <div className="ml-8 flex w-5/6 flex-col gap-2">
-          <p className="text-archery-blue-500 text-2xl font-bold md:text-4xl">
-            {title}
+      <div className="flex flex-col gap-8 py-10">
+        {events.length > 0 ? (
+          events.map((event) => (
+            <EventCard
+              key={event.id}
+              day={format(event.start, "EEE").toUpperCase()}
+              date={format(event.start, "d")}
+              title={event.title}
+              startTime={format(event.start, "h:mm a")}
+              endTime={format(event.end, "h:mm a")}
+              location={event.location || ""}
+              description={event.description || ""}
+            />
+          ))
+        ) : (
+          <p className="text-archery-blue-500 text-2xl sm:text-4xl md:text-6xl">
+            No upcoming events.
           </p>
-          <div className="my-2 flex items-center gap-1">
-            <IoTimeOutline className="text-archery-blue-500 text-xl md:text-2xl" />
-            <p className="text-archery-blue-500 mr-4 ml-1 text-lg font-bold">
-              {startTime} - {endTime}
-            </p>
-            <MdOutlineLocationOn className="text-archery-blue-500 text-xl md:text-2xl" />
-            <p className="text-archery-blue-500 text-lg font-bold">
-              {location}
-            </p>
-          </div>
-          <p className="text-archery-blue-500 text-lg/6">{description}</p>
-        </div>
+        )}
       </div>
     </div>
   );
