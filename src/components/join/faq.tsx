@@ -9,7 +9,7 @@ import { FAQdata } from "@/data/faq";
 
 const FAQ = () => {
   return (
-    <div className="flex flex-col items-center justify-center pb-10">
+    <div className="flex flex-col items-center justify-center pb-12">
       <div className="w-[40vw] py-9">
         <p className="text-center text-3xl font-extrabold text-black md:text-6xl">
           Frequently Asked Questions
