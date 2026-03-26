@@ -91,23 +91,7 @@ const Calendar = () => {
 
   return (
     <div className="mx-auto w-11/12 max-w-7xl p-3 sm:p-6">
-      {upcomingEvents.length > 0 && (
-        <div className="flex flex-col items-center">
-          {upcomingEvents.map((event) => (
-            <UpcomingEvents
-              key={event.id}
-              day={format(event.start, "EEE").toUpperCase()}
-              date={format(event.start, "d")}
-              title={event.title}
-              startTime={format(event.start, "h:mm a")}
-              endTime={format(event.end, "h:mm a")}
-              location={event.location || ""}
-              description={event.description || ""}
-            />
-          ))}
-        </div>
-      )}
-
+      <UpcomingEvents events={upcomingEvents} />
       <div className="mb-6 flex items-center justify-center sm:hidden">
         <Button
           variant="ghost"
@@ -169,7 +153,7 @@ const Calendar = () => {
             <div
               key={idx}
               className={cn(
-                "border-archery-blue-500 min-h-[140px] border-r border-b transition-colors",
+                "border-archery-blue-500 hide-scrollbar h-[140px] overflow-y-auto border-r border-b transition-colors",
                 (idx + 1) % 7 === 0 && "border-r-0",
                 idx >= calendarDays.length - 7 && "border-b-0",
                 !isSameMonth(day, monthStart) && "bg-archery-grey-200/15",
@@ -186,7 +170,7 @@ const Calendar = () => {
               >
                 {format(day, "d")}
               </span>
-              <div className="hide-scrollbar flex flex-col gap-1 overflow-y-hidden">
+              <div className="flex flex-col gap-1">
                 {getEventsForDay(day).map((event) => (
                   <CalendarEventCard key={event.id} event={event} />
                 ))}
