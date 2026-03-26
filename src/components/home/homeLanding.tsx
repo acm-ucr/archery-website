@@ -66,7 +66,7 @@ const HomeLanding = () => {
         <Image
           src={BowAndArrow}
           alt="Image of a bow and arrow"
-          className="z-10 w-full"
+          className="z-10 w-[100vw]"
         />
 
         <div className="absolute inset-0 mt-2 bg-gradient-to-r from-white from-0% via-white via-13% to-transparent to-30%" />
