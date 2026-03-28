@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from "next/link";
 import Image from "next/image";
 import LeftArrow from "@/public/404-left-arrow.svg";
@@ -29,6 +30,10 @@ const NotFound = () => {
       </div>
     </div>
   );
+=======
+const NotFound = () => {
+  return <div>404 Page Not Found</div>;
+>>>>>>> origin/main
 };
 
 export default NotFound;
