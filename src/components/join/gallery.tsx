@@ -23,14 +23,14 @@ const Gallery = () => {
         viewport={{ once: true }}
       >
         <div className="mt-6 flex flex-col items-center justify-self-center text-center md:col-start-2 md:row-start-1 md:ml-8 lg:ml-12">
-          <p className="text-archery-grey-400 px-6 text-2xl font-bold xl:mb-6 xl:text-4xl xl:leading-11">
+          <p className="text-archery-grey-400 px-6 text-2xl font-bold xl:mb-6 xl:text-5xl xl:leading-11">
             Everything you need to know about joining!
           </p>
           <div className="mt-4 flex items-center gap-2 md:flex-col">
             <div className="w-4 lg:w-6 xl:w-8">
               <Image src={Warning} alt="Warning" className="object-cover" />
             </div>
-            <p className="text-xs text-red-700 lg:text-base xl:text-xl">
+            <p className="text-xs text-red-700 lg:text-base xl:text-2xl">
               members must be UCR students
             </p>
           </div>
@@ -53,7 +53,7 @@ const Gallery = () => {
               alt="Membership Fee"
               className="mb-2 w-8 justify-self-center object-cover md:w-10 lg:w-12 xl:w-16"
             />
-            <p className="text-archery-grey-400 text-xl font-bold lg:text-2xl xl:text-4xl">
+            <p className="text-archery-grey-400 text-xl font-bold lg:text-2xl xl:text-5xl">
               Membership Fee
             </p>
           </div>
@@ -64,7 +64,7 @@ const Gallery = () => {
                 alt="Bullet Point 1"
                 className="mr-4 ml-5 w-4 object-cover md:mr-5 md:ml-6 lg:mx-7 lg:mr-6 lg:w-6 xl:w-8"
               />
-              <p className="text-archery-grey-400 text-start text-xs md:w-2/3 lg:text-base xl:text-xl">
+              <p className="text-archery-grey-400 text-start text-xs md:w-2/3 lg:text-base xl:text-2xl">
                 {" "}
                 <span className="font-bold">$75</span> yearly fee OR
                 <span className="font-bold"> $45</span> quarterly fee (only
@@ -77,7 +77,7 @@ const Gallery = () => {
                 alt="Bullet Point 2"
                 className="mr-4 ml-5 w-4 object-cover md:mr-5 md:ml-6 lg:mx-7 lg:mr-6 lg:w-6 xl:w-8"
               />
-              <p className="text-archery-grey-400 text-xs font-bold lg:text-base xl:mt-1 xl:text-xl">
+              <p className="text-archery-grey-400 text-xs font-bold lg:text-base xl:mt-1 xl:text-2xl">
                 Covers
               </p>
             </div>
@@ -86,7 +86,7 @@ const Gallery = () => {
             {Feeinfo.map(({ title, descriptions }, index) => (
               <p
                 key={index}
-                className="text-archery-grey-400 text-xs lg:text-base xl:text-xl"
+                className="text-archery-grey-400 text-xs lg:text-base xl:text-2xl"
               >
                 <span className="underline">{title}</span>
                 {descriptions}
