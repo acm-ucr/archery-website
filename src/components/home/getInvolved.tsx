@@ -11,7 +11,7 @@ const GetInvolved = () => {
       <span className="to-archery-yellow-300 from-archery-blue-400 w-3/4 bg-gradient-to-r from-20% to-70% bg-clip-text text-center text-xs font-bold text-transparent md:w-full md:text-xl xl:text-2xl">
         Take a shot at something new -- Join Archery @ UCR!!
       </span>
-      <div className="mt-4 flex flex-col items-center justify-center gap-y-5 md:flex-row md:gap-x-8 md:p-4 lg:gap-x-10 xl:gap-x-20 xl:p-8">
+      <div className="mt-4 flex w-full flex-col items-center justify-center gap-y-5 md:flex-row md:gap-x-8 md:p-4 lg:gap-x-10 xl:gap-x-20 xl:p-8">
         <InvolvedCard
           borderColor="border-archery-blue-300"
           bgColor="bg-archery-blue-300/10"
