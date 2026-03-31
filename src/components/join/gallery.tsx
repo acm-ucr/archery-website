@@ -14,7 +14,7 @@ const galleryAnimation = {
 
 const Gallery = () => {
   return (
-    <div className="mt-8 flex w-5/6 flex-col items-center gap-6 justify-self-center md:mt-20 md:ml-8 md:grid md:w-9/10 md:grid-cols-2 md:items-start md:gap-0 lg:mt-30 xl:mt-40">
+    <div className="mt-8 flex w-full flex-col items-center gap-6 px-8 md:mt-20 md:grid md:grid-cols-2 md:gap-0 md:px-24 lg:mt-30 lg:px-30 xl:mt-40">
       <motion.div
         variants={galleryAnimation}
         initial="initial"
@@ -22,11 +22,11 @@ const Gallery = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="mt-6 flex w-9/10 flex-col items-center justify-self-center text-center md:col-start-2 md:row-start-1 md:ml-8 md:w-3/5 lg:w-5/9 xl:w-7/12">
-          <p className="text-archery-grey-400 text-xl font-bold lg:text-2xl xl:mb-6 xl:text-4xl xl:leading-11">
+        <div className="mt-6 flex flex-col items-center justify-self-center text-center md:col-start-2 md:row-start-1 md:ml-8 lg:ml-12">
+          <p className="text-archery-grey-400 px-6 text-2xl font-bold xl:mb-6 xl:text-4xl xl:leading-11">
             Everything you need to know about joining!
           </p>
-          <div className="mt-4 flex items-center gap-1 md:mt-8 md:flex-col lg:mt-10 xl:mt-12">
+          <div className="mt-4 flex items-center gap-2 md:flex-col">
             <div className="w-4 lg:w-6 xl:w-8">
               <Image src={Warning} alt="Warning" className="object-cover" />
             </div>
@@ -46,8 +46,8 @@ const Gallery = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <div className="flex-col items-center justify-self-center text-center md:col-start-2 md:row-span-1 md:row-start-2 md:w-8/9 lg:w-4/5 xl:w-3/4">
-          <div className="mb-2 flex items-center justify-center gap-2 md:mb-4 lg:mb-6 xl:mb-8 xl:gap-4">
+        <div className="flex-col items-center justify-self-center text-center md:col-start-2 md:row-span-1 md:row-start-2 md:ml-8 lg:ml-12">
+          <div className="mb-2 flex items-center justify-center gap-2 md:mt-3 md:mb-4 lg:mb-6 xl:mb-8 xl:gap-4">
             <Image
               src={SalaryMan}
               alt="Membership Fee"
@@ -57,7 +57,7 @@ const Gallery = () => {
               Membership Fee
             </p>
           </div>
-          <div className="mb-4 ml-8 flex w-7/8 flex-col gap-4 justify-self-center md:justify-self-end xl:gap-8">
+          <div className="mb-4 ml-4 flex w-7/8 flex-col gap-4 justify-self-center md:justify-self-end lg:ml-12 xl:gap-8">
             <div className="flex items-start">
               <Image
                 src={Target}
@@ -82,7 +82,7 @@ const Gallery = () => {
               </p>
             </div>
           </div>
-          <div className="mt-4 ml-21 flex w-7/10 flex-col gap-4 justify-self-center text-start md:w-5/8 lg:ml-26 xl:mt-8 xl:ml-25 xl:gap-8">
+          <div className="mt-4 ml-17 flex w-7/10 flex-col gap-4 justify-self-center text-start lg:ml-32 xl:gap-6">
             {Feeinfo.map(({ title, descriptions }, index) => (
               <p
                 key={index}
