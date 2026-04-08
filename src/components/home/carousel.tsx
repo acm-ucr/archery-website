@@ -1,47 +1,26 @@
 "use client";
 import Image from "next/image";
 import { CarouselImages } from "@/data/carouselImages";
-import { useRef, useState, useEffect } from "react";
 
 const Carousel = () => {
-  const marqueeReference = useRef<HTMLDivElement>(null);
-  const [duration, setDuration] = useState("20s");
-
-  useEffect(() => {
-    if (marqueeReference.current) {
-      const carouselLength = marqueeReference.current.scrollWidth;
-      const speed = 0.02;
-      setDuration(`${carouselLength * speed}s`);
-    }
-  }, []);
-
   return (
-    <div className="relative mt-20 mb-10 hidden w-full overflow-hidden py-[2vh] md:flex">
-      <div
-        className="animate-marquee flex gap-x-4 px-[1vw]"
-        style={{ animationDuration: duration }}
-        ref={marqueeReference}
-      >
+    <div className="relative mt-20 mb-10 hidden w-full overflow-hidden py-[2vh] md:block">
+      <div className="animate-marquee flex w-max gap-x-4 pr-4 hover:[animation-play-state:paused]">
         {CarouselImages.map(({ image, alt }, index) => (
-          <div key={index}>
+          <div key={`set1-${index}`} className="shrink-0">
             <Image
               src={image}
               alt={alt}
-              className="min-h-[40vh] min-w-[20vw]"
+              className="h-[40vh] w-fit object-cover"
             />
           </div>
         ))}
-      </div>
-      <div
-        className="animate-marquee-continuation absolute flex justify-between gap-x-4 px-[1vw]"
-        style={{ animationDuration: duration }}
-      >
         {CarouselImages.map(({ image, alt }, index) => (
-          <div key={index}>
+          <div key={`set2-${index}`} className="shrink-0">
             <Image
               src={image}
               alt={alt}
-              className="min-h-[40vh] min-w-[20vw]"
+              className="h-[40vh] w-fit object-cover"
             />
           </div>
         ))}
