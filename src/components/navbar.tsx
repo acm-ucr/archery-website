@@ -53,13 +53,13 @@ const Navbar = () => {
       <div
         className={`absolute top-full z-50 flex w-full flex-col items-end overflow-hidden border-t-1 border-black/30 bg-white text-sm shadow-md md:hidden ${isOpen ? "h-auto" : "hidden h-0"}`}
       >
-        <div className="flex w-max flex-col">
+        <div className="flex w-1/6 flex-col place-self-center">
           {navbarLinks.map(({ link, name }, index) => (
             <Link
               key={index}
               href={link}
               onClick={closeMenu}
-              className={`last:bg-archery-blue-600 mt-2 px-4 text-center text-black last:mx-2 last:mb-4 last:rounded-full last:text-white`}
+              className={`last:bg-archery-blue-600 mt-2 text-center text-black last:mb-4 last:rounded-full last:text-white`}
             >
               {name}
             </Link>

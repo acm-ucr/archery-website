@@ -8,7 +8,7 @@ interface UpcomingEventsProps {
 
 const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
   return (
-    <div className="flex flex-col items-center justify-center pb-10">
+    <div className="flex flex-col items-center justify-center py-10">
       <div className="to-archery-blue-200 text-archery-blue-500 w-full rounded-full bg-gradient-to-r from-white from-0% to-100% text-left text-4xl font-bold">
         Upcoming Events
       </div>
