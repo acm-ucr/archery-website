@@ -6,7 +6,7 @@ import HowToJoinSide from "@/public/HowToJoinSide.webp";
 
 const HowToJoin = () => {
   return (
-    <div className="text-archery-grey-200 mt-20 grid w-11/12 grid-cols-1 gap-y-10 justify-self-center sm:w-5/6 lg:mt-40 lg:grid-cols-[3fr_2fr] lg:gap-x-6 lg:gap-y-0">
+    <div className="text-archery-grey-200 mx-auto mt-20 grid w-11/12 grid-cols-1 items-center gap-y-10 justify-self-center sm:w-5/6 lg:mt-40 lg:grid-cols-[3fr_2fr] lg:gap-x-6 lg:gap-y-0">
       <div className="flex justify-center lg:justify-center">
         <div className="flex w-full max-w-sm flex-col gap-6 sm:max-w-md lg:gap-8">
           <div className="flex justify-start">

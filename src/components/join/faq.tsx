@@ -9,8 +9,8 @@ import { FAQdata } from "@/data/faq";
 
 const FAQ = () => {
   return (
-    <div className="flex flex-col items-center justify-center pb-10">
-      <div className="w-[40vw] py-9">
+    <div className="flex flex-col items-center justify-center gap-12 py-10">
+      <div className="w-[40vw]">
         <p className="text-center text-3xl font-extrabold text-black md:text-6xl">
           Frequently Asked Questions
         </p>
@@ -25,7 +25,7 @@ const FAQ = () => {
                 </p>
               </AccordionTrigger>
               <AccordionContent>
-                <p className="w-[40vw] px-3 text-sm text-black md:text-base">
+                <p className="w-full px-3 text-sm text-black md:w-[40vw] md:text-base">
                   {answer}
                 </p>
               </AccordionContent>

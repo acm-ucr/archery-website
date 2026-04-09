@@ -1,44 +1,29 @@
 "use client";
 import Image from "next/image";
 import { CarouselImages } from "@/data/carouselImages";
-import { useRef, useState, useEffect } from "react";
 
 const Carousel = () => {
-  const marqueeReference = useRef<HTMLDivElement>(null);
-  const [duration, setDuration] = useState("20s");
-
-  useEffect(() => {
-    if (marqueeReference.current) {
-      const carouselLength = marqueeReference.current.scrollWidth;
-      const speed = 0.02;
-      setDuration(`${carouselLength * speed}s`);
-    }
-  }, []);
-
   return (
-    <div className="flex w-full flex-col">
-      <div className="relative mt-20 mb-10 hidden w-full overflow-hidden py-[2vh] md:flex">
-        <div
-          className="animate-marquee flex gap-x-4 px-[1vw]"
-          style={{ animationDuration: duration }}
-          ref={marqueeReference}
-        >
-          {CarouselImages.map(({ image, alt }, index) => (
-            <div key={index}>
-              <Image src={image} alt={alt} className="h-84 w-84" />
-            </div>
-          ))}
-        </div>
-        <div
-          className="animate-marquee-continuation absolute flex justify-between gap-x-4 px-[1vw]"
-          style={{ animationDuration: duration }}
-        >
-          {CarouselImages.map(({ image, alt }, index) => (
-            <div key={index}>
-              <Image src={image} alt={alt} className="h-84 w-84" />
-            </div>
-          ))}
-        </div>
+    <div className="relative mt-20 mb-10 w-full overflow-hidden py-[2vh]">
+      <div className="animate-marquee hidden w-max gap-x-4 pr-4 hover:[animation-play-state:paused] md:flex">
+        {CarouselImages.map(({ image, alt }, index) => (
+          <div key={`set1-${index}`} className="shrink-0">
+            <Image
+              src={image}
+              alt={alt}
+              className="h-[40vh] w-fit object-cover"
+            />
+          </div>
+        ))}
+        {CarouselImages.map(({ image, alt }, index) => (
+          <div key={`set2-${index}`} className="shrink-0">
+            <Image
+              src={image}
+              alt={alt}
+              className="h-[40vh] w-fit object-cover"
+            />
+          </div>
+        ))}
       </div>
       <div className="flex gap-2 md:hidden">
         <div className="flex flex-col gap-2">
