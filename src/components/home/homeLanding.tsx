@@ -4,6 +4,7 @@ import BlueBlur from "@/public/BlueBlurCircle.svg";
 import YellowBlur from "@/public/YellowBlurCircle.svg";
 import Image from "next/image";
 import { motion } from "motion/react";
+import CountUp from "react-countup";
 
 const HomeLanding = () => {
   return (
@@ -26,7 +27,7 @@ const HomeLanding = () => {
         <div className="flex flex-row items-end gap-1 md:gap-4 lg:gap-8">
           <div className="flex flex-col items-center">
             <div className="text-archery-blue-600 text-[14px] font-bold whitespace-nowrap md:pt-5 md:text-2xl lg:pt-10 lg:text-4xl">
-              30 +
+              <CountUp end={30} duration={2.5} />+
             </div>
             <div className="text-archery-grey-100 flex gap-3 text-[8px] font-light whitespace-nowrap md:text-[14px] lg:text-xl">
               members

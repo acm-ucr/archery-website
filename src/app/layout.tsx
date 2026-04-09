@@ -21,7 +21,7 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className={inter.className}>
+      <body className={`overflow-x-hidden ${inter.className}`}>
         <ReactQueryClientProvider>
           <Navbar />
 
