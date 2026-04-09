@@ -51,7 +51,7 @@ export const OfferCard = ({
               {listItems.map((item, index) => (
                 <li
                   key={index}
-                  className="text-archery-grey-200 ml-12 text-left text-xs font-light md:text-base"
+                  className="text-archery-grey-200 ml-12 -translate-x-7 pb-2 text-left text-xs font-light md:text-base"
                 >
                   {item}
                 </li>

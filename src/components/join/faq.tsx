@@ -16,12 +16,7 @@ const FAQ = () => {
         </p>
       </div>
       <div className="w-5/6 text-left md:w-[50vw]">
-        <Accordion
-          type="single"
-          collapsible
-          className="w-full"
-          defaultValue="item-0"
-        >
+        <Accordion type="single" collapsible className="w-full">
           {FAQdata.map(({ question, answer }, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger>

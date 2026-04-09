@@ -1,8 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { footerLinks } from "@/data/footerLinks";
 import ArcheryLogo from "@/public/archery-ucr-logo.svg";
 import FooterArrow from "@/public/footer-arrow.svg";
+import { motion } from "framer-motion";
+
+const itemAnimation = {
+  whileHover: { scale: 1.05 },
+  transition: { duration: 0.2 },
+};
 
 const Footer = () => {
   return (
@@ -20,8 +28,13 @@ const Footer = () => {
                 target="_blank"
                 className="text-archery-grey-200 flex items-center gap-2 md:pl-9"
               >
-                <Icon className="fill-archery-blue-500 h-auto w-3 md:w-6" />
-                {text}
+                <motion.div
+                  {...itemAnimation}
+                  className="flex items-center gap-2"
+                >
+                  <Icon className="fill-archery-blue-500 h-auto w-3 md:w-6" />
+                  {text}
+                </motion.div>
               </Link>
             ))}
           </div>

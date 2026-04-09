@@ -7,7 +7,7 @@ import Subheader from "@/components/subheader";
 const Gallery = () => {
   return (
     <div>
-      <div className="relative pt-25">
+      <div className="relative pt-30">
         <Subheader name="Gallery" />
       </div>
       <div className="flex justify-center p-5 text-center text-2xl font-bold">
@@ -16,7 +16,7 @@ const Gallery = () => {
         </p>
       </div>
 
-      <div className="relative min-h-screen w-full py-8 md:py-12 lg:py-20">
+      <div className="relative min-h-screen w-full">
         <Image
           src={galleryBackground}
           alt="Gallery Background"

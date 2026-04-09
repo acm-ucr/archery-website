@@ -24,7 +24,7 @@ import { CalendarEventCard } from "./calendarEventCard";
 import { CalendarEvent } from "./types";
 import { useQuery } from "@tanstack/react-query";
 
-interface GoogleCalendarEvent {
+export interface GoogleCalendarEvent {
   id: string;
   summary?: string;
   location?: string;

@@ -1,8 +1,10 @@
-import Target from "@/public/AboutPageTarget.webp";
-import TargetCenter from "@/public/MiddleOfTarget.webp";
+"use client";
+
+import Target from "@/public/AboutPageTarget.svg";
 import Arrow from "@/public/arrow.svg";
 import DownButton from "@/public/Down Button.webp";
 import Image from "next/image";
+import { Link as ScrollLink } from "react-scroll";
 
 const AboutLanding = () => {
   return (
@@ -22,26 +24,23 @@ const AboutLanding = () => {
           archery!
         </p>
         <div className="hidden flex-col items-center pt-32 sm:flex">
-          <p className="text-center font-extralight">learn more about us</p>
-          <Image src={DownButton} alt="Down Button" className="w-4" />
+          <ScrollLink
+            to="what-we-offer"
+            smooth={true}
+            duration={700}
+            className="flex flex-col items-center gap-1 transition-transform hover:scale-105 hover:cursor-pointer"
+          >
+            <p className="text-center font-extralight">learn more about us</p>
+            <Image src={DownButton} alt="Down Button" className="w-4" />
+          </ScrollLink>
         </div>
       </div>
-      <div className="relative w-[150vw] lg:w-[200vw]">
+      <div className="relative w-[150vw] overflow-hidden lg:w-[100vw]">
         <Image src={Target} alt="Target" className="z-10 h-auto w-full" />
-        <Image
-          src={TargetCenter}
-          alt="Part of Center of Target"
-          className="absolute top-[39.75%] left-[80.25%] z-10 w-1 object-cover md:top-[39.5%] md:left-[80%] md:w-2 lg:w-4"
-        />
-        <Image
-          src={TargetCenter}
-          alt="Part of Center of Target"
-          className="absolute top-[39.75%] left-[80.25%] z-10 w-1 scale-x-[-1] -rotate-10 md:top-[39.5%] md:left-[80%] md:w-2 lg:w-4"
-        />
         <Image
           src={Arrow}
           alt="Image of an arrow at center"
-          className="absolute top-[35.5%] left-[36%] z-20 w-1/2 -rotate-12"
+          className="absolute top-[35.5%] left-[36.5%] z-20 w-1/2 -rotate-12"
         />
         <Image
           src={Arrow}
