@@ -21,7 +21,7 @@ const EventCard = ({
 }: Events) => {
   return (
     <div className="flex w-full flex-col items-center justify-center gap-8 p-5 md:flex-row">
-      <div className="hidden md:flex">
+      <div className="hidden w-32 md:flex md:justify-center">
         <div className="text-archery-blue-500 flex flex-row items-center justify-center gap-2 px-8 text-3xl font-bold md:flex-col md:text-5xl">
           <p>{day}</p>
           <p>{date}</p>

@@ -1,19 +1,42 @@
+"use client";
+import { motion } from "framer-motion";
+
 interface MissionProps {
   title_our: string;
   title_mission: string;
 }
 
+const titleAnimation = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 },
+  viewport: { once: true },
+};
+
+const descriptionAnimation = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, delay: 0.2 },
+  viewport: { once: true },
+};
+
 const Mission = ({ title_our, title_mission }: MissionProps) => {
   return (
     <div className="flex flex-col items-center justify-center gap-10 p-8">
-      <div className="flex flex-row gap-2 text-center text-4xl font-extrabold md:gap-6 md:text-6xl">
+      <motion.div
+        {...titleAnimation}
+        className="flex flex-row gap-2 text-center text-2xl font-extrabold md:gap-6 md:text-6xl"
+      >
         <span className="text-black">{title_our}</span>
         <span className="from-archery-yellow-300 to-archery-blue-400 bg-gradient-to-r from-25% to-75% bg-clip-text text-transparent">
           {title_mission}
         </span>
-      </div>
+      </motion.div>
 
-      <div className="text-archery-grey-200 max-w-4xl text-center text-base md:text-xl">
+      <motion.div
+        {...descriptionAnimation}
+        className="text-archery-grey-200 max-w-4xl text-center text-base md:text-xl"
+      >
         <p>
           <span className="text-archery-blue-700 font-bold">
             UCR Archery Club
@@ -25,7 +48,7 @@ const Mission = ({ title_our, title_mission }: MissionProps) => {
           regional and national tournaments in the coming school years and set
           goals for personal discipline within and outside of the sport.
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 };

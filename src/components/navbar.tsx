@@ -6,11 +6,19 @@ import Image from "next/image";
 import NavbarLogo from "@/public/NavBar.webp";
 import { MenuIcon } from "lucide-react";
 import { IoMdClose } from "react-icons/io";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+
+const itemAnimation = {
+  whileHover: { scale: 1.05 },
+  transition: { duration: 0.2 },
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+  const pathname = usePathname();
   return (
     <div className="relative flex flex-col shadow-md">
       <div className="flex w-full items-center justify-between">
@@ -28,9 +36,9 @@ const Navbar = () => {
             <Link
               key={index}
               href={link}
-              className={`last:bg-archery-blue-600 flex items-center justify-center px-4 text-black last:rounded-full last:text-white`}
+              className={`last:bg-archery-blue-600 flex items-center justify-center px-4 last:rounded-full last:text-white ${pathname === link ? "text-archery-blue-600" : "text-black"}`}
             >
-              {name}
+              <motion.div {...itemAnimation}>{name}</motion.div>
             </Link>
           ))}
         </div>
@@ -51,7 +59,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`absolute top-full z-50 flex w-full flex-col items-end overflow-hidden border-t-1 border-black/30 bg-white text-sm shadow-md md:hidden ${isOpen ? "h-auto" : "hidden h-0"}`}
+        className={`absolute top-full z-50 flex w-full flex-col items-center overflow-hidden border-t-1 border-black/30 bg-white text-sm shadow-md md:hidden ${isOpen ? "h-auto" : "hidden h-0"}`}
       >
         <div className="flex w-1/6 flex-col place-self-center">
           {navbarLinks.map(({ link, name }, index) => (
