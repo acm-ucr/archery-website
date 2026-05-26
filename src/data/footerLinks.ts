@@ -10,8 +10,8 @@ interface FooterLink {
 export const footerLinks: FooterLink[] = [
   {
     icon: GoMail,
-    url: "mailto:ucrarcheryclub@gmail.com",
-    text: "ucrarcheryclub@gmail.com",
+    url: "mailto:archery.ucr@gmail.com",
+    text: "archery.ucr@gmail.com",
   },
   {
     icon: FaInstagram,
