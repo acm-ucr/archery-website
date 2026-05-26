@@ -66,8 +66,8 @@ const Gallery = () => {
               />
               <p className="text-archery-grey-400 text-start text-xs md:w-2/3 lg:text-base xl:text-2xl">
                 {" "}
-                <span className="font-bold">$75</span> yearly fee OR
-                <span className="font-bold"> $45</span> quarterly fee (only
+                <span className="font-bold">$125</span> yearly fee OR
+                <span className="font-bold"> $65</span> quarterly fee (only
                 offered winter and spring quarters)
               </p>
             </div>
